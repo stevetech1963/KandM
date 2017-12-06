@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "contactUs",
+    "title": "Contact Us",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "commerceSuiteSolution.contactUs.enabled": {
+      "group": "commerceSuiteSolution",
+      "subtab": "contactUs",
+      "type": "boolean",
+      "title": "Enabled",
+      "default": false
+    },
+    "contactUs.formId": {
+      "group": "commerceSuiteSolution",
+      "subtab": "contactUs",
+      "type": "string",
+      "title": "Form ID"
+    },
+    "contactUs.hash": {
+      "group": "commerceSuiteSolution",
+      "subtab": "contactUs",
+      "type": "string",
+      "title": "Generated Hash"
+    }
+  }
+}

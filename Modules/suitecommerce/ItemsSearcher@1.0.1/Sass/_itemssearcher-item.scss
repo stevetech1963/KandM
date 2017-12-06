@@ -1,0 +1,61 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.itemssearcher-item-results {
+	@extend .item-results;
+	color: $sc-theme-color;
+	background-color: $sc-theme-color-light;
+}
+.itemssearcher-item-results:hover{
+	color: $sc-theme-color-light;
+	background-color: $sc-theme-color;
+	//adjusting descendant classes 
+	.itemssearcher-item-results-title{
+		color: $sc-theme-color-light;
+		strong{
+			color: $sc-theme-color-light;
+		}
+	}
+}
+
+.itemssearcher-item-results-image {
+	@extend .item-results-image;
+}
+
+.itemssearcher-item-results-content {
+	@extend .item-results-content;
+}
+
+.itemssearcher-item-results-title {
+	@extend .item-results-title;
+}
+.itemssearcher-item-all-results {
+	@extend .all-results;
+	color: $sc-theme-color;
+	background-color: $sc-theme-color-light;
+	margin:0px;
+	padding: 15px 0;
+	text-align: center;
+}
+.itemssearcher-item-all-results:hover{
+	color: $sc-theme-color-light;
+	background-color:$sc-theme-color;
+}
+.itemssearcher-item-no-results {
+	@extend .no-results;
+}
+.itemssearcher-item-searching {
+	@extend .searching;
+}
+.itemssearcher-item-shadow {
+	@extend .tt-dropdown-menu-shadow-fix;
+}
+//override native tt-cursor class here
+.tt-cursor{
+	background-color: $sc-theme-color-light;
+	color: $sc-theme-color;
+}

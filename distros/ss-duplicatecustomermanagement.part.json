@@ -1,0 +1,44 @@
+{
+  "id": "ss-duplicatecustomermanagement",
+  "name": "SuiteSolutions - DuplicateCustomerManagement",
+  "pdistroVersion": "1.0.2",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": ["vinson-base"],
+  "modules": {
+    "efficiencies/DuplicateCustomerManagement": "1.0.2",
+    "efficiencies/EFCore": "1.0.1"
+  },
+  "tasksConfig": {
+    "ssp-libraries": {
+      "dependencies": [
+        "DuplicateCustomerManagement.ContextSetup"
+      ]
+    },
+    "backend-suitescript": {
+      "amdConfig": {
+        "paths": {
+          "Backbone.Validation": "backbone-validation.server.custom"
+        },
+        "shim": {
+          "Backbone.Validation": {
+            "exports": "Backbone.Validation"
+          }
+        },
+        "findNestedDependencies": true,
+        "map": {
+          "SC.Model": {
+            "Application": "Application.Backend"
+          },
+          "Utils": {
+            "Application": "Application.Backend"
+          }
+        }
+      }
+    }
+  }
+}

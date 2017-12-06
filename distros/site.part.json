@@ -1,0 +1,125 @@
+{
+    "id": "site",
+    "name": "DawsonTire",
+    "dependencies": ["qs-premium","ss-theme-summit"],
+    "endpoint": "true",
+    "modules": {
+        "site/BaseSassStyles.Site": "dev",
+        "site/CustomStyles.Override.Site":"dev",
+        "site/Footer.Site": "dev",
+        "site/Header.Site": "dev",
+        "site/Facets.Site": "dev",
+        "site/Home.Site": "dev",
+        "site/SiteSearch.Site": "dev",
+        "site/ItemsSearcher.Site": "dev",
+        "site/Wizard.Site": "dev",
+        "site/About.Site": "dev",
+        "site/GlobalImages.Favicon.Site": "dev",
+        "site/GoogleAdwordsFix.Site": "dev",
+        "site/ItemsKeyMapping.Site": "dev",
+        "site/LoginRegister.Site": "dev",
+        "site/Account.Site": "dev",
+        "site/OrderWizard.Module.Mounting.Site": "dev",
+        "site/CheckoutApplication.Site": "dev",
+        "site/ItemDetails.Site": "dev"
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    "Footer.Details.View",
+                    "Header.Message.View",
+                    "Home.SliderFix.View",
+                    "Home.MiddleContent.View",
+                    "Header.Menu.SiteSearch.View",
+                    "Header.SiteSearch.Disable.View",
+                    "About",
+                    "About.View",
+                    "GoogleAdWords.Fix",
+                    "ItemsKeyMapping.Site",
+                    "ItemDetails.View.Site",
+                    "Header.Logo.View.Site"
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    "Footer.Details.View",
+                    "Header.Message.View",
+                    "Header.Menu.SiteSearch.View",
+                    "Header.SiteSearch.Disable.View",
+                    "GoogleAdWords.Fix",
+                    "ItemsKeyMapping.Site",
+                    "Header.Logo.View.Site"
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    "Footer.Details.View",
+                    "Header.Message.View",
+                    "Header.Menu.SiteSearch.View",
+                    "Header.SiteSearch.Disable.View",
+                    "GoogleAdWords.Fix",
+                    "ItemsKeyMapping.Site",
+                    "LoginRegister.Register.Taxable.View",
+                    "Account.Register.Model.Site",
+                    "OrderWizard.Module.Mounting",
+                    "Header.Logo.View.Site"
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+                "Account.Model.Register.Site"
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                        "BaseSassStyles.Site",
+                        "CustomStyles.Override.Site",
+                        "Footer.Site",
+                        "Header.Site",
+                        "Facets.Site",
+                        "Home.Site",
+                        "SiteSearch.Site",
+                        "ItemsSearcher.Site",
+                        "About.Site"
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                        "BaseSassStyles.Site",
+                        "CustomStyles.Override.Site",
+                        "Footer.Site",
+                        "Header.Site",
+                        "Facets.Site",
+                        "Home.Site",
+                        "SiteSearch.Site",
+                        "ItemsSearcher.Site"
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                        "BaseSassStyles.Site",
+                        "CustomStyles.Override.Site",
+                        "Footer.Site",
+                        "Header.Site",
+                        "Facets.Site",
+                        "Home.Site",
+                        "SiteSearch.Site",
+                        "ItemsSearcher.Site",
+                        "Wizard.Site",
+                        "OrderWizard.Module.Mounting.Site"
+                    ]
+                }
+            ]
+        }
+    }
+}

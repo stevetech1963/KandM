@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "themeColors",
+        "title": "Colors",
+        "group": "themes",
+        "description": ""
+    },
+    "properties": {
+        "themes.themeColors.footer.barColor": {
+            "group": "themes",
+            "subtab": "themeColors",
+            "type": "string",
+            "title": "Header",
+            "default": "green"
+        },
+        "themes.themeColors.footer.iconColor": {
+            "group": "themes",
+            "subtab": "themeColors",
+            "type": "string",
+            "title": "Footer",
+            "default": "blue"
+        },
+        "themes.themeColors.footer.textColor": {
+            "group": "themes",
+            "subtab": "themeColors",
+            "type": "string",
+            "title": "Home Banner Text Color",
+            "default": "red"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+1.0.0
+- Initial Release
+
+1.2.0
+ - Vinson Release 
+- Used ServiceController in services 
+- Migrate configuration to vinson
+- Requires the Models.Init module in files that uses Commerce API
+

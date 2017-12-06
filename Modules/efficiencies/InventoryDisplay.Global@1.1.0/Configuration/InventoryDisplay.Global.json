@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "inventoryDisplayGlobal",
+        "title": "Inventory Display Global",
+        "description": "",
+        "group": "commerceSuiteSolution"
+    },
+    "properties": {
+        "inventoryDisplayGlobal.messageInStock": {
+            "group": "commerceSuiteSolution",
+            "subtab": "inventoryDisplayGlobal",
+            "type": "string",
+            "title": "In Stock Message",
+            "description": "",
+            "default": "In Stock"
+        },
+        "inventoryDisplayGlobal.messageDropShip": {
+            "group": "commerceSuiteSolution",
+            "subtab": "inventoryDisplayGlobal",
+            "type": "string",
+            "title": "Drop Ship Message",
+            "description": "",
+            "default": "In Stock"
+        },
+        "inventoryDisplayGlobal.messageSpecialOrder": {
+            "group": "commerceSuiteSolution",
+            "subtab": "inventoryDisplayGlobal",
+            "type": "string",
+            "title": "Special Order Message",
+            "description": "",
+            "default": "In Stock"
+        },
+        "inventoryDisplayGlobal.messageBackOrder": {
+            "group": "commerceSuiteSolution",
+            "subtab": "inventoryDisplayGlobal",
+            "type": "string",
+            "title": "Back Order Message",
+            "description": "",
+            "default": "On Back Order"
+        }
+    }
+}

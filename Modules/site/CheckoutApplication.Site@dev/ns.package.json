@@ -1,0 +1,8 @@
+{
+    "gulp": {
+        "javascript": "JavaScript/*.js"
+    },
+    "overrides": {
+        "suitecommerce/CheckoutApplication@2.2.0/JavaScript/SC.Checkout.Configuration.Steps.Standard.js": "JavaScript/SC.Checkout.Configuration.Steps.Standard.js"
+    }
+}

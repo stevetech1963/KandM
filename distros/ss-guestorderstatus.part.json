@@ -1,0 +1,69 @@
+{
+  "id": "ss-guestorderstatus",
+  "name": "GuestOrderStatus",
+  "pdistroVersion": "1.2.0",
+  "dependencies": ["vinson-base"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/GuestOrderStatus": "1.2.0",
+    "efficiencies/OrderStatusSummary": "1.0.1",
+    "efficiencies/EFCore": "1.0.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "GuestOrderStatus"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "GuestOrderStatus.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "GuestOrderStatus"
+          ]
+        }
+      ]
+    },
+    "backend-suitescript": {
+      "amdConfig": {
+        "paths": {
+          "Backbone.Validation": "backbone-validation.server.custom"
+        },
+        "shim": {
+          "Backbone.Validation": {
+            "exports": "Backbone.Validation"
+          }
+        },
+        "findNestedDependencies": true,
+        "map": {
+          "SC.Model": {
+            "Application": "Application.Backend"
+          },
+          "Utils": {
+            "Application": "Application.Backend"
+          },
+          "GuestOrderStatus.Model": {
+              "Application": "Application.Backend"
+          },
+          "EF - GOS - SL - Guest Order Status Service": {
+              "Application": "Application.Backend"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+1.0.0
+- Initial Release
+
+1.1.0
+- BOPIS enhancement
+
+1.2.0
+- Vinson Release
+- Used ServiceController in services
+- Fixes undefined Configuration.publish
+- added ssplibraries Entry Point file
+

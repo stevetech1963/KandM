@@ -1,0 +1,75 @@
+/* My Account */
+.overview-profile-email {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.overview-home-orders-title {
+    border-bottom: $sc-theme-border-light;
+    border-top: $sc-theme-border-light;
+}
+.myaccount-layout-main header,
+.information-box-summary {
+    border-top: $sc-theme-border-light;
+}
+.list-header-view,
+.product-list-lists-header,
+.product-list-list-details-wrapper {
+    border-bottom: $sc-theme-border-light;
+}
+.info-card{
+    padding: $sc-base-padding * 3;
+    border: none;
+    @include border-radius($sc-theme-border-radius);
+}
+.information-box {
+    border: none;
+    @include border-radius($sc-theme-border-radius);
+}
+.balance-indicator-bar {
+    background-color: $sc-theme-border-color-light;
+}
+.list-header-view-accordion-body-button-sort{
+  height: $sc-target-size;
+  width: $sc-target-size;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.header-menu-profile .header-menu-myaccount-overview {
+    border-bottom: $sc-theme-border-light;
+}
+.QuoteList .list-header-view-accordion-body-label-group .list-header-view-accordion-body-select,
+.OrderItemReorderListView .list-header-view-accordion-body-label-group .list-header-view-accordion-body-select,
+.list-header-view-sorts .list-header-view-filters .list-header-view-accordion-body-select,
+.product-list-list-details-button-expander {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.product-list-list-details-button-edit {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* My Account Menu Tree */
+.menu-tree {
+    font-family: $sc-theme-secondary-font;
+}
+.menu-tree-node-item-anchor {
+    background-color: $sc-theme-border-color-light;
+    border-bottom: 1px solid $sc-theme-input-color;
+}
+.menu-tree-node {
+    &:first-child .menu-tree-node-item-anchor {
+        border-top-left-radius: $sc-theme-border-radius;
+        border-top-right-radius: $sc-theme-border-radius;
+    }
+    &:last-child .menu-tree-node-item-anchor {
+        border-bottom-left-radius: $sc-theme-border-radius;
+        border-bottom-right-radius: $sc-theme-border-radius;
+        border-bottom: none;
+    }
+}
+.menu-tree-node-submenu-wrapper {
+    border-bottom: none;
+}

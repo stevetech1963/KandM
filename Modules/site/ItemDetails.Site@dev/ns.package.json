@@ -1,0 +1,16 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "sass": [
+            "Sass/*.scss"
+        ],
+        "templates": [
+            "Templates/*.tpl"
+        ]
+    },
+    "overrides": {
+        "themes/summit/overrides/Theme_ItemDetails@1.0.0/Templates/qs_item_details.tpl": "Templates/item_details.tpl"
+    }
+}

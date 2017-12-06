@@ -1,0 +1,48 @@
+{
+    "type": "object",
+    "properties": {
+        "home.middleTextTitle": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "translate": true,
+            "title": "Middle Text Title",
+            "description": "Middle text title zone",
+            "default": "Lorem Ipsum"
+        },
+        "home.middleTextContent": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "title": "Home Middle Text Area",
+            "nsType": "textarea",
+            "translate": true,
+            "description": "Middle Text Content Area",
+            "default": "Hello World"
+        },
+        "home.middleTextBannerImageURL": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "title": "Image URL",
+            "description": "Enter the URL location of the image file that is displayed with the middle text content",
+            "default":""
+        },
+        "home.middleTextButtonText": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "title": "Button Text",
+            "description": "Enter the text to be displayed on the button",
+            "default":""
+        },
+        "home.middleTextButtonURL": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "title": "Link URL",
+            "description": "Enter the URL destination to link to from the button",
+            "default": "#"
+        }
+    }
+}

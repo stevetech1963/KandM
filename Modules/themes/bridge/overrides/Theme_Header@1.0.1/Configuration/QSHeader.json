@@ -1,0 +1,21 @@
+{
+	"type": "object",
+    "properties": {
+        "header.logoBackgroundImg": {
+            "group": "layout",
+            "subtab": "header"
+        ,	"type": "string"
+		,	"title": "Logo Background Image"
+        ,	"description": "Enter the URL location of the background image file to display in the background of the logo. Use img/<file-name> and upload via the File Cabinet."
+        ,   "default": "img/logo_background.png"
+        },
+        "header.backgroundImg": {
+            "group": "layout",
+            "subtab": "header"
+        ,   "type": "string"
+        ,   "title": "Header Background Image"
+        ,   "description": "Enter the URL location of the background image file to display in the background of the header. Use img/<file-name> and upload via the File Cabinet."
+        ,   "default": "img/header_background.jpg"
+        }
+    }
+}

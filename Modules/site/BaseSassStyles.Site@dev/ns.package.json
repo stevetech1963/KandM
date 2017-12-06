@@ -1,0 +1,15 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "themes/summit/overrides/Theme_BaseSassStyles@1.0.0/Sass/variables/_qs-colors.scss": "Sass/variables/_colors.scss",
+        "themes/summit/overrides/Theme_BaseSassStyles@1.0.0/Sass/variables/_qs-theme.scss": "Sass/variables/_theme.scss",
+        "themes/summit/overrides/Theme_BaseSassStyles@1.0.0/Sass/atoms/_qs-forms.scss": "Sass/atoms/_forms.scss",
+        "themes/summit/overrides/Theme_BaseSassStyles@1.0.0/Sass/atoms/_qs-buttons.scss": "Sass/atoms/_buttons.scss",
+        "themes/summit/overrides/Theme_BaseSassStyles@1.0.0/Sass/molecules/_qs-expands.scss": "Sass/molecules/_expands.scss",
+        "themes/summit/overrides/Theme_BaseSassStyles@1.0.0/Sass/atoms/_qs-typography.scss": "Sass/atoms/_typography.scss"
+    }
+}

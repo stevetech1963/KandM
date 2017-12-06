@@ -1,0 +1,41 @@
+{
+  "id": "ss-inventorydisplay-global",
+  "name": "InventoryDisplay Global",
+  "pdistroVersion": "1.1.0",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": ["vinson-base"],
+  "modules": {
+    "efficiencies/GlobalConfiguration": "1.0.0",
+    "efficiencies/InventoryDisplay.Global": "1.1.0"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "InventoryDisplay.Global"
+        ]
+      }
+    ],
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "InventoryDisplay.Global"
+          ]
+        }
+      ]
+    },
+    "ssp-libraries": {
+      "dependencies": [
+        "InventoryDisplay.Global.Configuration"
+      ]
+    }
+  }
+}

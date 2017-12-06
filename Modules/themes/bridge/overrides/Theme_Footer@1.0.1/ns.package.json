@@ -1,0 +1,24 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "images": [
+            "Images/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Footer@1.2.0/Sass/_footer.scss": "Sass/_qs-footer.scss",
+        "efficiencies/Footer.Copyright@1.1.1/Templates/footer.tpl": "Templates/qs_footer.tpl",
+        "efficiencies/Footer.Copyright@1.1.1/Templates/footer_simplified.tpl": "Templates/qs_footer_simplified.tpl"
+    }
+}

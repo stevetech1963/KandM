@@ -1,0 +1,200 @@
+{
+    "id": "boilerplate",
+    "name": "SuiteSolution Boilerplate - For Vinson",
+    "dependencies": ["vinson-base"],
+    "folders": {
+        "modules": "Modules",
+        "suitecommerceModules": "Modules/suitecommerce",
+        "thirdPartyModules": "Modules/third_parties",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution",
+        "binaries": "bin"
+    },
+    "endpoint": true,
+    "modules": {
+        "efficiencies/AdvancedItemImages": "1.2.0",
+        "efficiencies/Backbone.CompositeView.CollectionViewFix": "1.0.1",
+        "efficiencies/Backbone.CompositeView.DataContext": "1.0.0",
+        "efficiencies/Backbone.PluginInstaller": "1.0.0",
+        "efficiencies/Backbone.View.PostContextHook": "1.0.0",
+        "efficiencies/Case.UrlParams" : "1.0.0",
+        "efficiencies/ContactUs": "1.3.1",
+        "efficiencies/CMSadapterFixes": "1.2.2",
+        "efficiencies/CMSMerchandisingZonesInitialization": "1.0.1",
+        "efficiencies/CMSRefreshLinks": "1.0.0",
+        "efficiencies/EnvironmentFiles": "3.0.0",
+        "efficiencies/EFCore": "1.0.1",
+        "efficiencies/Footer.Copyright": "1.1.1",
+        "efficiencies/HashScroll": "1.0.0",
+        "efficiencies/ItemDetails.View.LinkToReviews": "1.0.0",
+        "efficiencies/ItemDetails.View.SelectSingleOption": "1.0.1",
+        "efficiencies/ItemDetails.View.VideoOnGallery": "1.1.0",
+        "efficiencies/ResolveAssetUrl": "1.0.0",
+        "efficiencies/SetupWebsiteConfigurationEnhancements": "1.0.0",
+        "efficiencies/ShoppingStarterFixes": "1.1.0",
+        "efficiencies/StagingNoIndex": "1.0.0",
+        "efficiencies/StyleFixes": "2.0.0",
+        "efficiencies/SSPFiles": "3.1.1",
+        "efficiencies/GlobalConfiguration": "1.0.0",
+        "efficiencies/QuickStartConfiguration": "1.0.0",
+        "efficiencies/ItemDetails.AddToQuote.Enablement": "1.0.0",
+        "third_parties_efficiencies/jQuery-fitvids": "1.1"
+    },
+    "tasksConfig": {
+        "livereload": {
+            "enable": true,
+            "secure": {
+                "js_port": 35730,
+                "port": 35731
+            },
+            "config": {
+                "start": true,
+                "silent": true,
+                "port": 35729,
+                "https": true
+            },
+            "tasks": {
+                "sass": true,
+                "templates": true
+            }
+        },
+        "local": {
+            "https": {
+                "port": 7778,
+                "key": "SupportScripts/local-https/key.pem",
+                "cert": "SupportScripts/local-https/cert.pem"
+            }
+        },
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+                    {"add": "ItemDetails.AddToQuote.Enablement", "after": "ProductDetailToQuote"},
+                    "Backbone.CompositeView.CollectionViewFix",
+                    "Backbone.CompositeView.DataContext",
+                    "CMSRefreshLinks",
+                    "CMSadapterFixes",
+                    "CMSMerchandisingZonesInitialization",
+                    "Footer.View.Copyright",
+                    "HashScroll",
+                    "ItemDetails.View.LinkToReviews",
+                    "ItemDetails.View.SelectSingleOption",
+                    "ItemDetails.View.VideoOnGallery",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "StagingNoIndex",
+                    "AdvancedItemImages",
+                    "ContactUs"
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+                    "Backbone.CompositeView.CollectionViewFix",
+                    "Backbone.CompositeView.DataContext",
+                    "CMSadapterFixes",
+                    "Footer.View.Copyright",
+                    "Footer.Simplified.View.Copyright",
+                    "HashScroll",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "AdvancedItemImages",
+                    "Case.UrlParams"
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+                    "Backbone.CompositeView.CollectionViewFix",
+                    "Backbone.CompositeView.DataContext",
+                    "CMSadapterFixes",
+                    "Footer.View.Copyright",
+                    "Footer.Simplified.View.Copyright",
+                    "HashScroll",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "AdvancedItemImages"
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+                "CMSadapterFixes",
+                "ContactUs.Model",
+                "ContactUs.ServiceController",
+                "SetupWebsiteConfigurationEnhancements"
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                        "StyleFixes",
+                        "ContactUs"
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                        {
+                            "module": "StyleFixes",
+                            "exclude": [
+                                "facets_item_cell_fixes"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                        {
+                            "module": "StyleFixes",
+                            "exclude": [
+                                "facets_item_cell_fixes"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "efficiencies-release": {
+            "extras": [
+                "bin/",
+                "gulp/livereload/**/*",
+                "gulp/distros/**/*",
+                "gulp/module-creator/**/*",
+                "gulp/ns-deploy/fs.js",
+                "gulp/ns-deploy/net.js",
+                "gulp/package-manager/index.js",
+                "gulp/tasks/backend-suitescript.js",
+                "gulp/tasks/clean.js",
+                "gulp/tasks/deploy.js",
+                "gulp/tasks/eslint.js",
+                "gulp/tasks/distros.js",
+                "gulp/tasks/efficiencies-release.js",
+                "gulp/tasks/hosting-root-files.js",
+                "gulp/tasks/local.js",
+                "gulp/tasks/module.js",
+                "gulp/tasks/sass.js",
+                "gulp/tasks/templates.js",
+                "gulp/tasks/watch.js",
+                "HostingRootFiles/*",
+                "package.json",
+                ".svnignore",
+                ".eslintrc",
+                ".eslintignore",
+                ".gitignore",
+                "svnignore.sh",
+                ".nvmrc",
+                "SupportScripts/**/*",
+                "Modules/ps/**/*",
+                "Modules/site/**/*"
+            ]
+        }
+    }
+}

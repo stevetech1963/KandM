@@ -1,0 +1,16 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/RequestQuoteAccessPoints@1.0.1/Templates/requestquote_accesspoints_headerlink.tpl": "Templates/qs_requestquote_accesspoints_headerlink.tpl"
+    }
+}

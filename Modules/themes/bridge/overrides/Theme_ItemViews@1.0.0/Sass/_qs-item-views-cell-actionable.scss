@@ -1,0 +1,246 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-cell-actionable{
+	display:block;
+	clear:both;
+	&:hover{
+		background:none;
+	}
+}
+
+.item-views-cell-actionable-image{
+	@extend .col-xs-3;
+	@extend .col-sm-3;
+}
+
+.item-views-cell-actionable-details{
+	@extend .col-xs-9;
+	@extend .col-sm-6;
+}
+
+.item-views-cell-actionable-actions{
+	@extend .col-xs-offset-3;
+	@extend .col-xs-9;
+	@extend .col-sm-offset-0;
+	@extend .col-sm-3;
+}
+
+.item-views-cell-actionable-name{
+	margin-bottom:$sc-small-margin;
+}
+
+.item-views-cell-actionable-name-viewonly{
+	@extend .medium-title-viewonly;
+}
+
+.item-views-cell-actionable-thumbnail{
+	img{
+		width:$img-large;
+        border: 1px solid $sc-color-theme-light;
+	}
+}
+
+.item-views-cell-actionable-price{
+	margin-bottom:$sc-small-margin * 2;
+}
+
+.item-views-cell-actionable-name-link,
+.item-views-cell-actionable-price .item-views-price-lead{
+	@extend .item-details-content-header-title;
+    font-size: 16px;
+    font-weight: $sc-font-weight-light;
+}
+
+.item-views-cell-actionable-sku-label {
+    font-weight: $sc-font-weight-bold;
+}
+
+.item-views-selected-option,
+.item-views-cell-actionable-selected-options-cell {
+    margin: 0 !important; //gift wrap module is overriding this
+}
+
+.item-views-cell-actionable-qty{
+	clear:both;
+	display:block;
+	width:100%;
+	font-size:$sc-base-font-size;
+}
+
+.item-views-cell-actionable-qty input[type=number]{
+    float: left;
+    width: 60px;
+    height: 43px;
+    padding: 0;
+    padding-right: $sc-base-padding;
+    text-align: right;
+    color: $sc-theme-color;
+    background: $sc-theme-color-tertiary;
+    outline: none;
+    border: 0;
+    @media (min-width: $screen-md-min) {
+        border: 2px solid $sc-theme-color;
+    }
+}
+
+.item-views-cell-actionable-label-qty{
+	@extend .sc-label;
+	display: block;
+	margin-right: $sc-base-margin*3;
+	line-height: 1.2;
+	overflow:hidden;
+	margin-top:$sc-base-margin;
+	margin-bottom:$sc-base-margin;
+}
+
+.item-views-cell-actionable-input-qty{
+	display:block;
+	margin-bottom:$sc-small-margin;
+	overflow:hidden;
+}
+
+.item-views-cell-actionable-details{
+	.cart-option{
+	margin-bottom:$sc-base-margin;
+	}
+}
+
+.item-views-cell-actionable-options{
+	.cart-option{
+		font-size:$sc-base-font-size;
+	}
+}
+
+.item-views-cell-actionable-amount{
+	clear:both;
+	display:block;
+	font-size:$sc-base-font-size;
+	margin-bottom:$sc-medium-margin;
+	@media (min-width: $screen-sm-min){
+		margin-bottom:0;
+	}
+
+}
+
+.item-views-cell-actionable-amount-label{
+	@extend .sc-label;
+}
+
+.item-views-cell-actionable-edit-button{
+   @extend .split-button;
+    @media (min-width: $screen-sm-min){
+		 position:absolute;
+         margin-top: 21px; //vertical alignment with quantity box
+	}
+}
+
+.item-views-cell-actionable-edit-button-edit{
+	@extend .button-tertiary;
+	@extend .button-small;
+	border-right:none;
+}
+
+.item-views-cell-actionable-edit-button-drop{
+	@extend .button-tertiary;
+	@extend .button-small;
+	i{
+		@extend .fa;
+		@extend %fa-angle-down;
+	}
+}
+
+.item-views-cell-actionable-edit-content{
+    @extend .split-button-dropdown;
+    @extend .dropdown-menu;
+    //position:relative;
+    display:none;
+    padding:$sc-base-padding * 3;
+     @media (min-width: $screen-sm-min){
+		 left:-65px;
+	}
+	li{
+		margin-bottom:$sc-base-margin;
+	}
+	li:last-child{
+		margin-bottom:0;
+	}
+    li a{
+    	margin:0;
+    	padding:0;
+    	line-height:1.2;
+    	cursor:pointer;
+    	cursor:hand;
+    	color:$sc-color-link;
+    	&:hover{
+    		color:$sc-color-link-hover;
+   			text-decoration:none;
+   			background:none;
+   		}
+    }
+}
+
+.item-views-cell-actionable-table{
+	@extend .table-flex-item-actionable;
+	table-layout: fixed;
+}
+
+.item-views-cell-actionable-table td{
+	padding-left:$sc-base-padding * 3;
+	padding-right:$sc-base-padding * 3;
+	vertical-align:top;
+}
+
+.item-views-cell-actionable-table-first{
+	@extend .table-flex-tdfirst;
+	width:25%;
+    @media (min-width: $screen-sm-min){
+      padding-left: 0 !important; // force align left
+    }
+}
+
+.item-views-cell-actionable-table-middle {
+	@extend .table-flex-middle;
+}
+
+// column
+.item-views-cell-actionable-table-summary {
+    @extend .table-flex-middle;
+    @media (min-width: $screen-md-min){
+       width: 110px;
+       padding-right: 0 !important;
+    }
+}
+
+.item-views-cell-actionable-table-last{
+	@extend .table-flex-tdlast;
+	vertical-align:top;
+	@media (min-width: $screen-sm-min){
+	   width: 120px; //25%;
+	}
+}
+.item-views-cell-actionable-alert-placeholder{
+	margin: $sc-base-margin * 2 0;
+}
+
+/* Divider */
+.cart-divider-row {
+    & td {
+        padding: 0;
+        @media (min-width: $screen-sm-min){
+           padding: $sc-base-padding*10 0;
+        }
+    }
+    & .cart-divider {
+        @extend .item-details-divider-desktop;
+        margin: $sc-small-margin*2 0;
+    }
+}
+/* Remove the final divider */
+.cart-detailed-item-view-cell-actionable-table tbody>div:last-child .cart-divider-row {
+    display: none;
+}

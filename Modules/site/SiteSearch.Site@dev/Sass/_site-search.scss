@@ -1,0 +1,86 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.site-search {
+	@extend .nav-search;
+	height: inherit;
+	padding:0px;
+	border-top: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.site-search-content {
+	@extend .nav-search-content;
+	height: inherit;
+	right: 10px;
+	width: inherit;
+}
+.site-search-content::before, .site-search-content::after{
+	display:none;
+}
+.site-search-content-form {
+	@extend .nav-search-content-form;
+}
+
+.site-search-content-input {
+	@extend .nav-search-content-input;
+	height: inherit;
+	color: $sc-theme-color-light;
+	.itemssearcher-input:focus{
+		outline:none;
+		outline-style:none;
+		box-shadow:none;
+	}
+	.tt-dropdown-menu{
+		background-color: $sc-theme-color-light;
+	}
+}
+
+.site-search-input-icon {
+	@extend .nav-search-input-icon;
+	top: 0px;
+	left: 0px;
+	font-size: 20px;
+	padding:6px;
+}
+
+.site-search-input-reset {
+	@extend .nav-search-input-reset;
+	width: auto;
+	height: auto;
+	padding: 7px;
+	right: 0px;
+	background: transparent;
+}
+
+.site-search-button-submit {
+	@extend .nav-search-button-submit;
+	padding: 10px;
+	top: initial;
+	right: initial;
+	padding:7px;
+	font-size:14px;
+	background-color: $sc-theme-color-light;
+	color: $sc-theme-color;
+	//account for 1 pixel offset
+	margin-left:1px;
+	border-radius: 0px;
+}
+.site-search-button-submit:hover{
+	background-color:$sc-theme-color-grey-darker;
+	color:$sc-theme-color-light;
+}
+
+.site-search-button-close {
+	@extend .nav-search-button-close;
+}
+
+.site-search-input-reset-icon {
+	@extend .nav-search-input-reset-icon;
+	color:white;
+}

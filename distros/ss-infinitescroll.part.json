@@ -1,0 +1,40 @@
+{
+  "id": "ss-infinitescroll",
+  "name": "InfiniteScroll",
+  "pdistroVersion": "1.1.1",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": ["vinson-base"],
+  "modules": {
+    "efficiencies/GlobalConfiguration": "1.0.0",
+    "efficiencies/InfiniteScroll": "1.1.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "Facets.Browse.View.InfiniteScroll"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "InfiniteScroll"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+	"type": "object",
+    "properties": {
+        "footer.backgroundImg": {
+            "group": "layout",
+            "subtab": "footer"
+        ,	"type": "string"
+		,	"title": "Upper section background url"
+        ,	"description": "Enter the URL location of the background image file to display in the background of the upper level footer. Use img/<file-name> and upload via the File Cabinet."
+        ,   "default": "img/footer_background.png"
+        },
+        "footer.icon": {
+            "group": "layout",
+            "subtab": "footer"
+        ,   "type": "string"
+        ,   "title": "Upper section icon (font awesome icon name)"
+        ,   "description": "Enter the icon name as listed under 'Web Application Icons' at http://fontawesome.io/icons/ Does not require prefix 'fa-'"
+        ,   "default": "map-marker"
+        },
+        "footer.title": {
+            "group": "layout",
+            "subtab": "footer"
+        ,   "type": "string"
+        ,   "translate": true
+        ,   "title": "Upper section title"
+        ,   "description": "Title for the content area in the upper section"
+        ,   "default": "New York, NY"
+        },
+        "footer.primaryText": {
+            "group": "layout",
+            "subtab": "footer"
+        ,   "type": "string"
+        ,   "title": "Upper section text area 1"
+        ,   "nsType": "textarea"
+        ,   "translate": true
+        ,   "description": "First text area for the content in the upper section"
+        ,   "default": "620 Eight Avenue, New York, NY 10037"
+        },
+        "footer.secondaryText": {
+            "group": "layout",
+            "subtab": "footer"
+        ,   "type": "string"
+        ,   "nsType": "textarea"
+        ,   "translate": true
+        ,   "title": "Upper section text area 2"
+        ,   "description": "Second text area for the content in the upper section"
+        ,   "default": "Monday - Friday: Noon - 1am  Saturday: 2pm - 3am"
+        }
+    }
+}

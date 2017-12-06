@@ -1,0 +1,178 @@
+{
+	"type": "object",
+    "properties": {
+        "footer.socialMediaLinksTitle": {
+            "group": "layout",
+            "subtab": "footer"
+        ,   "type": "string"
+        ,   "translate": true
+        ,   "title": "Social media links title"
+        ,   "description": "Title for the social media links section"
+        ,   "default": "Follow us on"
+        },
+        "footer.socialMediaLinks": {
+          "group": "layout"
+        , "subtab": "footer"
+        , "type": "array"
+        , "title": "Social media links"
+        , "description": "Simple links to various social media locations, using FontAwesome icons from the 'Brand Icons' or 'Web Applications' sections of http://fontawesome.io/icons/"
+        , "items": {
+            "type": "object"
+          , "properties": {
+              "icon": {
+                "type": "string"
+              , "title": "Icon Name"
+              , "description": ""
+              },
+              "text": {
+                "type": "string"
+              , "title": "Text"
+              , "description": ""
+              },
+              "href": {
+                "type": "string"
+              , "title": "URL"
+              , "description": ""
+              }
+            }
+          },
+          "default": [
+            {
+              "icon": "facebook"
+            , "text": "facebook"
+            , "href": "www.facebook.com"
+            },
+            {
+              "icon": "twitter"
+            , "text": "twitter"
+            , "href": "www.twitter.com"
+            },
+            {
+              "icon": "pinterest"
+            , "text": "pinterest"
+            , "href": "www.pinterest.com"
+            },
+            {
+              "icon": "youtube"
+            , "text": "youtube"
+            , "href": "www.youtube.com"
+            },
+            {
+              "icon": "instagram"
+            , "text": "instagram"
+            , "href": "www.instagram.com"
+            },
+            {
+              "icon": "google-plus"
+            , "text": "google+"
+            , "href": "plus.google.com"
+            }
+          ]
+        },
+        "footer.multiColLinks": {
+          "group": "layout"
+        , "subtab": "footer"
+        , "type": "array"
+        , "title": "Multi-column Links"
+        , "description": "Multiple column footer displaying up to four columns of links"
+        , "items": {
+            "type": "object"
+          , "properties": {
+              "text": {
+                "type": "string"
+              , "title": "Text"
+              , "description": ""
+              },
+              "href": {
+                "type": "string"
+              , "title": "URL"
+              , "description": ""
+              },
+              "column": {
+                "type": "string"
+              , "title": "Column"
+              , "description": ""
+              , "enum": ["Column 1", "Column 2", "Column 3", "Column 4"]
+              }
+            }
+          },
+          "default": [
+            {
+              "text": "Here to Help"
+            , "href": ""
+            , "column": "Column 1"
+            },
+            {
+              "text": "FAQs"
+            , "href": "#"
+            , "column": "Column 1"
+            },
+            {
+              "text": "Delivery & Collection"
+            , "href": "#"
+            , "column": "Column 1"
+            },
+            {
+              "text": "Returns & Refunds"
+            , "href": "#"
+            , "column": "Column 1"
+            },
+            {
+              "text": "Shopping With Us"
+            , "href": ""
+            , "column": "Column 2"
+            },
+            {
+              "text": "International Delivery"
+            , "href": "#"
+            , "column": "Column 2"
+            },
+            {
+              "text": "Our Stores"
+            , "href": "#"
+            , "column": "Column 2"
+            },
+            {
+              "text": "Size Guides"
+            , "href": "#"
+            , "column": "Column 2"
+            },
+            {
+              "text": "About Us"
+            , "href": ""
+            , "column": "Column 3"
+            },
+            {
+              "text": "Corporate Site"
+            , "href": "#"
+            , "column": "Column 3"
+            },
+            {
+              "text": "Jobs"
+            , "href": "#"
+            , "column": "Column 3"
+            },
+            {
+              "text": "Contact Us"
+            , "href": "/contact-us"
+            , "column": "Column 3"
+            },
+            {
+              "text": "Legal"
+            , "href": ""
+            , "column": "Column 4"
+            },
+            {
+              "text": "Privacy & Cookies"
+            , "href": "#"
+            , "column": "Column 4"
+            },
+            {
+              "text": "Accessibility"
+            , "href": "#"
+            , "column": "Column 4"
+            }
+          ]
+        }
+    }
+}

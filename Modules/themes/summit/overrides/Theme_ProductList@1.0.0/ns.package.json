@@ -1,0 +1,22 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "sass": [
+            "Sass/*.scss"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ProductList@2.3.0/Sass/_product-list-details-later-macro.scss": "Sass/_qs-product-list-details-later-macro.scss",
+        "suitecommerce/ProductList@2.3.0/Sass/_product-list-details-later.scss": "Sass/_qs-product-list-details-later.scss",
+        "suitecommerce/ProductList@2.3.0/Templates/product_list_details_later.tpl": "Templates/qs_product_list_details_later.tpl",
+        "suitecommerce/ProductList@2.3.0/Templates/product_list_details_later_macro.tpl": "Templates/qs_product_list_details_later_macro.tpl"
+    }
+}

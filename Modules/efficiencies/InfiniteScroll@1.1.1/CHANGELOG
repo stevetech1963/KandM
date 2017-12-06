@@ -1,0 +1,10 @@
+1.0.0
+- Initial Release
+
+1.1.0
+- Vinson Release
+- Migrate configuration to vinson 
+- Fixes next page increment even when no result for current page
+
+1.1.1
+- Update the Facets.Browse.View.Infinite.Scroll.js: push newly loaded items in Facets.Models

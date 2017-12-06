@@ -1,0 +1,54 @@
+{
+    "id": "site-qs-premium-summit",
+    "name": "Site QS Premium - Summit Theme",
+    "dependencies": ["qs-premium","ss-theme-summit"],
+    "endpoint": "true",
+    "modules": {
+
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                    ]
+                }
+            ]
+        }
+    }
+}

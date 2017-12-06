@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "header.bannerMsg": {
+            "group": "layout",
+            "subtab": "header",
+            "type": "string",
+            "title": "Header Banner Message",
+            "description": "Sitewide Header Message",
+            "default": "Hello World"
+        }
+    }
+}

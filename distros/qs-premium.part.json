@@ -1,0 +1,21 @@
+{
+  "id": "qs-premium",
+  "name": "Quickstart Premium",
+  "dependencies": [
+    "boilerplate",
+    "ss-duplicatecustomermanagement",
+    "ss-backinstock",
+    "ss-giftwrap",
+    "ss-guestorderstatus",
+    "ss-hashtaggallery",
+    "ss-sizechart",
+    "ss-inventorydisplay-global",
+    "ss-infinitescroll"
+  ],
+  "modules": {},
+  "tasksConfig": {
+    "ssp-libraries": {
+      "dependencies": []
+    }
+  }
+}

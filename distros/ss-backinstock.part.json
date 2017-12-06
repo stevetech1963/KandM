@@ -1,0 +1,95 @@
+{
+  "id": "ss-backinstock",
+  "pdistroVersion": "1.2.0",
+  "name": "SuiteSolution - BackInStock",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": [
+    "vinson-base"
+  ],
+  "modules": {
+    "efficiencies/BackInStockNotification": "1.2.0",
+    "efficiencies/BackInStockNotificationAdmin": "1.0.2",
+    "efficiencies/DuplicateCustomerManagement": "1.0.2",
+    "efficiencies/EFCore": "1.0.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "BackInStockNotification"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          "BackInStockNotification",
+          "BackInStockNotificationAdministrator"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "BackInStockNotification.Configuration",
+        "BackInStockNotification",
+        "BackInStockNotification.ServiceController"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "BackInStockNotification"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            "BackInStockNotificationAdmin"
+          ]
+        },
+        {
+          "name": "Checkout",
+          "dependencies": [
+          ]
+        }
+      ]
+    },
+    "backend-suitescript": {
+      "amdConfig": {
+        "paths": {
+          "Backbone.Validation": "backbone-validation.server.custom"
+        },
+        "shim": {
+          "Backbone.Validation": {
+            "exports": "Backbone.Validation"
+          }
+        },
+        "findNestedDependencies": true,
+        "map": {
+          "SC.Model": {
+            "Application": "Application.Backend"
+          },
+          "Utils": {
+            "Application": "Application.Backend"
+          },
+          "BackInStockNotification": {
+            "Application": "Application.Backend"
+          }
+        }
+      }
+    }
+  }
+}

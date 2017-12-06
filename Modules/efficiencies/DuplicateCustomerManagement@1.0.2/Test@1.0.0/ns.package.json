@@ -1,0 +1,16 @@
+{
+    "gulp": {
+        "automation-selectors": [
+            "Automation/Data/selectors.json"
+        ],
+        "automation-helpers": [
+            "Automation/Helpers/*.js"
+        ],
+        "automation-jasmine-helpers": [
+            "Automation/Preconditions/*.js"
+        ],
+        "automation-tests": [
+            "Automation/Tests/*.js"
+        ]
+    }
+}

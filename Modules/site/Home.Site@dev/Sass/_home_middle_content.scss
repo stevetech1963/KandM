@@ -1,0 +1,28 @@
+.home-middle-content-wrapper{
+    margin: $sc-base-margin*12;
+}
+.home-middle-content-text-container{
+
+}
+.home-middle-content-title{
+    font-size: $sc-theme-font-size-large;
+}
+.home-middle-content-text{
+    line-height: 32px;
+}
+.home-middle-content-link{
+    color: $sc-theme-color-light;
+    background-color: $sc-theme-color;
+    padding: 0 $sc-base-padding;
+    margin-left: $sc-base-margin*4;
+    display:inline-block;
+}
+.home-middle-content-link:hover{
+    background-color: $sc-theme-color-grey-darker;
+}
+.home-middle-content-banner-image-container{
+    @extend .container;
+}
+.home-middle-content-banner-image{
+    @extend .row
+}

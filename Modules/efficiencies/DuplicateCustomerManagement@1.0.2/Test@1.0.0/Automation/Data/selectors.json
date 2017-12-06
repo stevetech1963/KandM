@@ -1,0 +1,30 @@
+{
+	"selectors": {
+		"loginTouchPoint" : "[data-touchpoint='login']"
+	,	"loginEmail" : ".login-register-login-form [name=email]"
+	,	"loginPassword" : ".login-register-login-form [name=password]"
+	,	"submitLogin" : ".login-register-login-form button[data-action=login-button]"
+	,	"guestButton" : "#guest-show-view > button"
+	,	"guestFirstName" : "#guest-firstname"
+	,	"guestLastName" : "#guest-lastname"
+	,	"guestEmail" : "#guest-email"
+	,	"guestSubmit" : "button.login-register-checkout-as-guest-submit"
+	,	"clickCreateAccount" : "#register-show-view .login-register-checkout-as-guest-button-show"
+	,	"registerLink" : ".header-profile-register-link"
+	,	"registerFirstName" : ".login-register-register-form [name=firstname]"
+	,	"registerLastName" : ".login-register-register-form [name=lastname]"
+	,	"registerCompany" : ".login-register-register-form [name=company]"
+	,	"registerEmail" : ".login-register-register-form [name=email]"
+	,	"registerPassword" : ".login-register-register-form [name=password]"
+	,	"registerPassword2" : ".login-register-register-form [name=password2]"
+	,	"registerSubmit" : "button.login-register-register-form-submit"
+	,	"registerEmailSubscribe" : "#register-emailsubscribe"
+	,	"myAccountLayout" : ".myaccount-layout"
+
+    }
+    ,"xpaths":
+    {
+    	"SB_loginTouchPoint" : "//a[contains(.,'Log')]"
+    ,	"SB_registerTouchPoint" : "//a[contains(.,'Register')]"
+    }
+}

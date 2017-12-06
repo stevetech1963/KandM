@@ -1,0 +1,79 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "about",
+        "title": "About Us",
+        "description": "About Us Page Settings",
+        "group": "layout"
+    },
+    "properties": {
+        "about.navigationLinks": {
+            "group": "layout",
+            "subtab": "about",
+            "type": "array",
+            "title": "Navigation Links",
+            "description": "About page navigation links",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string",
+                        "title": "Text",
+                        "description": ""
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "URL",
+                        "description": ""
+                    }
+                }
+            } ,
+            "default": [
+                    {
+                        "text": "Link a"
+                    ,	"href": "#"
+                    }
+                ,	{
+    					"text": "Link b"
+    				,	"href": "#"
+                    }
+    			,	{
+    					"text": "Link c"
+    				,	"href": "#"
+                    }
+                ]
+        },
+        "about.carouselImages": {
+            "group": "layout",
+            "subtab": "about",
+            "type": "array",
+            "title": "Carousel images",
+            "description": "Carousel images URLs",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Image Url"
+                    },
+                    "linktext": {
+                        "type": "string",
+                        "title": "Link Text"
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Link Location"
+                    }
+                }
+            }
+        }
+    }
+}

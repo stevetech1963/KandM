@@ -1,0 +1,40 @@
+{
+  "id": "ss-sizechart",
+  "name": "SizeChart",
+  "pdistroVersion": "1.1.0",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": ["vinson-base"],
+  "modules": {
+    "efficiencies/SizeChart": "1.1.0"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "SizeChart"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "SizeChart.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "SizeChart"
+          ]
+        }
+      ]
+    }
+  }
+}

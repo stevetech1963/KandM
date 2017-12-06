@@ -1,0 +1,8 @@
+1.0.0
+- Initial Release
+
+1.1.0
+- Add Config: Company Name, Year/Initial Year, Copyright Hide/Show
+
+1.1.1
+-  fix configuration id footer.copyright.name to footer.copyright.companyName

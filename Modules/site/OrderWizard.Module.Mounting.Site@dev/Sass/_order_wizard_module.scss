@@ -1,0 +1,11 @@
+.mountoptions-control-label{
+    @extend .sc-value;
+	display: block;
+	margin-bottom: $sc-base-margin;
+	font-size: $sc-base-font-size;
+	font-weight: $sc-font-weight-semibold;
+}
+.mountoptions-control-input{
+    @extend .input-large;
+    margin-top: 15px;
+}

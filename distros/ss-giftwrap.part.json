@@ -1,0 +1,67 @@
+{
+  "id": "ss-giftwrap",
+  "name": "GiftWrap",
+  "pdistroVersion": "1.1.0",
+  "dependencies": ["vinson-base"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/GiftWrap": "1.1.0",
+    "efficiencies/Backbone.PluginInstaller": "1.0.0",
+    "efficiencies/Backbone.View.PostContextHook": "1.0.0"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+          {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+          "GiftWrap"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+          {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+          "GiftWrap"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+          {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+          "GiftWrap"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "Application.Events.Once",
+        "GiftWrap.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "GiftWrap"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            "GiftWrap"
+          ]
+        }
+      ]
+    }
+  }
+}

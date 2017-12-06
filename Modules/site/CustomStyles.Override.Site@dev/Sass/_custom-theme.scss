@@ -1,0 +1,241 @@
+/*
+	Sitewide styles, to override existing styles or add new ones
+    Put CSS in here to make small tweaks instead of overriding whole files
+ */
+
+html,
+body {
+    font-family: $sc-theme-primary-font;
+    font-weight: $sc-font-weight-light;
+    background-color: $sc-theme-color-light;
+    color: $sc-theme-color-copy;
+    font-size: floor($sc-base-font-size * 0.94);
+}
+
+.container {
+    //background-color: $sc-theme-color-content;
+}
+.content-banner .container {
+    background-color: transparent; // fix issue caused by above color
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $sc-theme-secondary-font;
+}
+
+input:hover,
+input:focus,
+input:active,
+button:hover,
+button:focus,
+button:active {
+    outline: none;
+}
+
+
+/* LAYOUT */
+
+/* Spacing */
+
+.shopping-layout-breadcrumb,
+.myaccount-layout-container,
+.checkout-layout-content,
+.cart,
+.cart-detailed,
+.error-management-forbidden-error,
+.error-management-internal-error,
+.error-management-page-not-found,
+.facets-facet-browse,
+.item-details,
+.product-reviews-form,
+.product-reviews-form-preview,
+.product-reviews-form-confirmation,
+.cms-landing-page,
+.store-locator-list-all-main,
+.store-locator-main,
+.store-locator-details-main,
+.store-locator-upgrade-container,
+.contact-us-container,
+.guest-order-status-layout-container,
+.look-layout-container,
+.lookbook-layout-container {
+    padding-left: $sc-theme-mobile-padding;
+    padding-right: $sc-theme-mobile-padding;
+    background-color: $sc-theme-color-content;
+    border-radius: 0 0 $sc-theme-border-radius $sc-theme-border-radius;
+    @include box-shadow(0 6px 12px transparentize(black, 1-0.05));
+
+    @media (min-width: $screen-md-min) {
+        padding-left: $sc-theme-desktop-padding;
+        padding-right: $sc-theme-desktop-padding;
+    }
+}
+
+.myaccount-layout-breadcrumb,
+.shopping-layout-breadcrumb {
+    padding-top: $sc-theme-desktop-padding;
+    font-family: $sc-theme-secondary-font;
+    text-transform: uppercase;
+}
+
+//custom
+.myaccount-layout-breadcrumb,
+.shopping-layout-breadcrumb,
+{
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+
+.error-management-forbidden-error,
+.error-management-internal-error,
+.error-management-page-not-found {
+    padding-bottom: 50px;
+}
+
+.shopping-layout-header,
+.checkout-layout-header,
+.myaccount-layout-header {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: $sc-base-margin*3;
+    background-color: transparent;
+}
+
+.checkout-layout-content {
+    @include border-radius($sc-theme-border-radius);
+}
+
+.login-register-header {
+    padding-top: $sc-theme-desktop-padding;
+}
+
+/* Box styling */
+/* Box around content, slider products, related items, recently viewed, pdp */
+.box {
+    background-color: $sc-theme-color-content;
+    @include border-radius($sc-theme-border-radius);
+    @include box-shadow(0 6px 12px transparentize(black, 1-0.05));
+}
+
+/* Search */
+.site-search-content-input {
+    @extend .nav-search-content-input;
+    .itemssearcher-input {
+        border: 1px solid $sc-theme-border-color-light;
+        border-top-left-radius: $sc-theme-border-radius;
+        border-bottom-left-radius: $sc-theme-border-radius;
+    }
+    .itemssearcher-input:focus{
+        outline:none;
+        outline-style:none;
+        box-shadow:none;
+    }
+}
+
+/* MISC */
+/* Not worth adding an extra file for */
+
+/* Product Slider */
+%product-slider {
+    @extend .large-title;
+    text-align: center;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+/* Product Detail */
+.social-sharing-flyout-content-social-facebook,
+.social-sharing-flyout-content-social-twitter,
+.social-sharing-flyout-content-social-google,
+.social-sharing-flyout-content-social-pinterest  {
+    border: 1px solid $sc-theme-border-color-light;
+    color: $sc-theme-color-light;
+    font-family: $sc-theme-secondary-font;
+    @include border-radius($sc-theme-border-radius);
+    background-color: $sc-theme-color;
+}
+.social-sharing-flyout-content-social-facebook:hover,
+.social-sharing-flyout-content-social-twitter:hover,
+.social-sharing-flyout-content-social-google:hover,
+.social-sharing-flyout-content-social-pinterest:hover{
+    background-color: $sc-theme-color-grey-darker;
+}
+
+/* Infinite Scroll */
+.infinite-scroll-top {
+    background: $sc-color-theme;
+    @include border-radius($sc-theme-border-radius);
+}
+
+.infinite-scroll-top-icon {
+    color: $sc-color-tertiary;
+    position: relative;
+    top: 10px;
+}
+
+/* Cart */
+.cart-divider-row {
+    & td {
+        padding-bottom: $sc-base-padding * 2;
+    }
+}
+.cart-divider {
+    @extend .item-views-cell-divider;
+}
+
+/* Buttons Border Fix back to Default Tertiary */
+.product-detail-to-quote-add-to-quote-button,
+.product-detail-to-quote-loading,
+.product-list-control-button-wishlist,
+.product-list-control-single-button-wishlist {
+    border: 2px solid $sc-color-link;
+}
+
+/* Product Reviews on PDP */
+.product-reviews-center-container,
+.product-reviews-center-container-header {
+    padding: 0;
+    border: none;
+}
+
+.item-details-more-info-content-container {
+    @media (min-width: $screen-md-min) {
+        padding: 0;
+    }
+}
+
+h3.product-reviews-center-container-header-title { // targetting a specific element
+    @extend h2;
+}
+
+.product-reviews-center-container{
+    background: none;
+}
+
+/* CMS */
+.cms-content {
+    margin-top: $sc-base-margin * 3;
+    margin-bottom: $sc-base-margin * 3;
+    & h2 {
+        @extend %product-slider;
+    }
+}
+
+.cms-content-text h1,
+.cms-content-text h2,
+.cms-content-text h3,
+.cms-content-text h4,
+.cms-content-text h5,
+.cms-content-text h6 {
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+        "themes/summit/overrides/Theme_Footer@1.0.0/Templates/qs_footer.tpl": "Templates/footer.tpl",
+        "themes/summit/overrides/Theme_Footer@1.0.0/Sass/_qs-footer.scss": "Sass/_footer.scss"
+    }
+}

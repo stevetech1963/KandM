@@ -1,0 +1,9 @@
+.facets-facet-browse-list-header-filters-wrapper-extended{
+    @extend .list-header-filters-wrapper;
+
+    background-color: $sc-theme-color-light;
+    @media (min-width: $screen-md-min){
+        background-color: $sc-theme-color-light;
+    }
+
+}

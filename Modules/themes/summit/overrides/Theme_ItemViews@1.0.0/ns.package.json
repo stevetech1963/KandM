@@ -1,0 +1,21 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "sass": [
+            "Sass/*.scss"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ItemViews@1.3.0/Sass/_item-views-option-tile.scss": "Sass/_qs-item-views-option-tile.scss",
+        "suitecommerce/ItemViews@1.3.0/Sass/_item-views-cell-actionable.scss": "Sass/_qs-item-views-cell-actionable.scss",
+        "suitecommerce/ItemViews@1.3.0/Templates/item_views_cell_actionable.tpl": "Templates/qs_item_views_cell_actionable.tpl"
+    }
+}

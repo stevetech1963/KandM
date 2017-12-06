@@ -1,0 +1,22 @@
+{
+    "gulp": {
+        "configuration": [
+            "Configuration/*.json"
+        ],
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "templates": [
+            "Templates/*.tpl"
+        ],
+        "sass": [
+            "Sass/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Header@1.2.0/Templates/header_menu.tpl": "Templates/header_menu.tpl",
+        "themes/summit/overrides/Theme_Header@1.0.0/Templates/qs_header.tpl": "Templates/header.tpl",
+        "themes/summit/overrides/Theme_Header@1.0.0/Sass/_qs-header-menu.scss": "Sass/_header-menu.scss",
+        "suitecommerce/Header@1.2.0/Sass/_header-menu-myaccount.scss": "Sass/_header-menu-myaccount.scss"
+    }
+}

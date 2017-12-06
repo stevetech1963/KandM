@@ -1,0 +1,85 @@
+{
+  "id": "ss-theme-eldridge",
+  "name": "SuiteSolution Theme Eldridge - Vinson",
+  "dependencies": ["vinson-base"],
+  "modules": {
+      "themes/ThemesConfiguration": "1.0.0",
+      "themes/eldridge/Theme_BaseSassStyles": "2.0",
+      "themes/eldridge/Theme_Cart": "1.0",
+      "themes/eldridge/Theme_CheckoutApplication": "1.0",
+      "themes/eldridge/Theme_Facets": "2.0",
+      "themes/eldridge/Theme_Footer": "2.0",
+      "themes/eldridge/Theme_GlobalViews": "1.0",
+      "themes/eldridge/Theme_Header": "1.1",
+      "themes/eldridge/Theme_Home": "1.0",
+      "themes/eldridge/Theme_ItemViews": "2.0",
+      "themes/eldridge/Theme_ListHeader": "1.0",
+      "themes/eldridge/Theme_ShoppingApplication": "1.1",
+      "themes/eldridge/Theme_SiteSearch": "1.1"
+  },
+  "tasksConfig": {
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "Theme_ShoppingApplication",
+            {
+              "module": "Theme_BaseSassStyles",
+              "include": [
+                "qs-eldridge-reset"
+              ]
+            },
+            "Theme_Cart",
+            "Theme_Facets",
+            "Theme_Footer",
+            "Theme_GlobalViews",
+            "Theme_Header",
+            "Theme_Home",
+            "Theme_ItemViews",
+            "Theme_ListHeader",
+            "Theme_SiteSearch"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            {
+              "module": "Theme_BaseSassStyles",
+              "include": [
+                "qs-eldridge-reset"
+              ]
+            },
+            "Theme_Facets",
+            "Theme_Footer",
+            "Theme_GlobalViews",
+            "Theme_Header",
+            "Theme_ListHeader",
+            "Theme_SiteSearch"
+          ]
+        },
+        {
+          "name": "Checkout",
+          "dependencies": [
+            "Theme_CheckoutApplication",
+            {
+              "module": "Theme_BaseSassStyles",
+              "include": [
+                "qs-eldridge-reset"
+              ]
+            },
+            "Theme_Facets",
+            "Theme_Footer",
+            "Theme_GlobalViews",
+            "Theme_Header",
+            "Theme_ListHeader",
+            "Theme_SiteSearch"
+          ]
+        }
+      ]
+    },
+    "ssp-libraries": {
+      "dependencies": []
+    }
+  }
+}

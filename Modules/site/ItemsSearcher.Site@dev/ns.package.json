@@ -1,0 +1,13 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/*.scss"
+        ],
+        "templates": [
+            "Templates/*.tpl"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ItemsSearcher@1.0.1/Sass/_itemssearcher.scss": "Sass/_itemssearcher.scss"
+    }
+}

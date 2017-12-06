@@ -1,0 +1,95 @@
+.home-section:nth-child(even){
+    background-color:$sc-theme-color-grey-lighter;
+}
+
+.home-slider-container{
+    margin-top: -20px;
+}
+.home-infoblock-layout{
+    margin-bottom: $sc-base-margin*3;
+}
+.home-infoblock-tinter{
+    background-color: rgba($sc-theme-color-dark-primary,0.7);
+    background-blend-mode: multiply;
+    margin: 10px 0px;
+    border-radius:0px;
+}
+.home-infoblock-tinter:hover{
+    background-color: rgba($sc-theme-color-grey-darker,0.7);
+    background-blend-mode: multiply;
+}
+.home-slide-caption-button-greyscale{
+    @extend .button-small;
+    @extend .button-secondary;
+    //without important flag here, styles get overriden
+    //it appears these code blocks are being compiled first
+    background: $sc-theme-color-primary;
+    border: 2px solid $sc-theme-color-primary;
+    color: $sc-theme-color-light;
+    box-shadow: 1px 1px 1px #333;
+    @media (min-width: $screen-xs-min){
+      width: auto;
+      position:relative;
+    }
+}
+.home-slide-caption-button-greyscale:hover{
+    background: $sc-theme-color;
+    border: $sc-theme-color;
+}
+.home-infoblock-link-hover-handler{
+    &:hover .home-infoblock-title,
+    &:active .home-infoblock-title,
+    &:focus .home-infoblock-title,
+    &:hover .home-infoblock-text,
+    &:active .home-infoblock-text,
+    &:focus .home-infoblock-text {
+        color: $sc-theme-infoblock-link-color;
+        opacity: 1;
+    }
+
+    &:hover .home-infoblock-title,
+    &:active .home-infoblock-title,
+    &:focus .home-infoblock-title{
+        @media (min-width: $screen-sm-min) {
+            font-size: $sc-theme-infoblock-title-size-desktop+3px;
+        }
+    }
+
+    &:hover .home-infoblock-text,
+    &:active .home-infoblock-text,
+    &:focus .home-infoblock-text{
+        @media (min-width: $screen-sm-min){
+            font-size: $sc-theme-infoblock-text-size+3px;
+        }
+    }
+}
+.home-infoblock-text-transform{
+    text-transform: none;
+}
+
+.home-page-freetext-no-box{
+    @extend .col-xs-12;
+    padding: $sc-base-padding*6;
+}
+.home-page-freetext-flex{
+    display: flex;
+}
+.home-page-freetext-content-flex{
+    flex: 1;
+}
+
+.home-page-freetext-content-image-flex{
+    @extend .home-page-freetext-content-flex;
+    padding: 0px;
+}
+
+.home-page-freetext-content-text-flex{
+    @extend .home-page-freetext-content-flex;
+    background-color: $sc-theme-color-grey;
+}
+.home-page-freetext-content-text-wrapper{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0px $sc-base-padding*4;
+}

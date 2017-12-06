@@ -1,0 +1,20 @@
+.wizard-step-navigation-step-anchor{
+    background-color: $sc-theme-color-light;
+    color: $sc-theme-color-tertiary;
+
+    @media (min-width: $screen-sm-min){
+        background-color: $sc-theme-color-light;
+        color: $sc-theme-color-tertiary;
+    }
+}
+
+.wizard-step-navigation-disabled{
+    background-color: $sc-theme-color-light;
+    color: $sc-theme-color-tertiary;
+}
+
+.wizard-step-navigation-active{
+    &:hover{
+        color: $sc-theme-color;
+    }
+}

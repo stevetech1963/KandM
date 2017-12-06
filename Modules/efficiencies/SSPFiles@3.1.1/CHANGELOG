@@ -1,0 +1,17 @@
+1.0.0
+- Initial Release
+
+2.0.0
+- Montblanc Migration
+
+3.0.0
+- Vinson Migration
+
+3.1.0
+- Removed postframe.js
+- Fixed WebFont usage
+- Fixed local CMS loading
+- Fix load local from https in my_account-local.ssp
+
+3.1.1
+- Fix cms loading in ssp local files

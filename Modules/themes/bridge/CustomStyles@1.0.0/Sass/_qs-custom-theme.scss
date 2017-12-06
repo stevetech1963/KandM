@@ -1,0 +1,270 @@
+/*
+	Sitewide styles, to override existing styles or add new ones
+    Put CSS in here to make small tweaks instead of overriding whole files
+ */
+
+html,
+body {
+    font-family: $sc-theme-primary-font;
+    background-color: $sc-theme-color-lightest;
+    color: $sc-theme-color-copy;
+}
+
+.container {
+    background-color: $sc-theme-color-tertiary;
+}
+.content-banner .container {
+    background-color: transparent; // fix issue caused by above color
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+input:hover,
+input:focus,
+input:active,
+button:hover,
+button:focus,
+button:active {
+    outline: none;
+}
+
+
+/* LAYOUT */
+
+/* Spacing */
+
+.shopping-layout-breadcrumb,
+.myaccount-layout-container,
+.cart,
+.cart-detailed,
+.error-management-forbidden-error,
+.error-management-internal-error,
+.error-management-page-not-found,
+.facets-facet-browse,
+.item-details,
+.product-reviews-form,
+.product-reviews-form-preview,
+.product-reviews-form-confirmation,
+.cms-landing-page,
+.store-locator-list-all-main,
+.store-locator-main,
+.store-locator-details-main,
+.store-locator-upgrade-container,
+.contact-us-container,
+.guest-order-status-layout-container,
+.look-layout-container,
+.lookbook-layout-container,
+.login-register,
+#wizard {
+    padding-left: $sc-theme-mobile-padding;
+    padding-right: $sc-theme-mobile-padding;
+
+    @media (min-width: $screen-md-min) {
+        padding-left: $sc-theme-desktop-padding;
+        padding-right: $sc-theme-desktop-padding;
+    }
+}
+
+.shopping-layout-breadcrumb,
+.checkout-layout-content,
+.myaccount-layout-breadcrumb {
+    padding-top: 50px;
+}
+
+.error-management-forbidden-error,
+.error-management-internal-error,
+.error-management-page-not-found {
+    padding-bottom: 50px;
+}
+
+.shopping-layout-header,
+.checkout-layout-header,
+.myaccount-layout-header {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+/* MISC */
+/* Not worth adding an extra file for */
+
+/* Global Views */
+/* Modal */
+.global-views-modal-content {
+    border-radius: 0;
+}
+
+/* Infinite Scroll */
+.infinite-scroll-top {
+    background: $sc-color-theme;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.infinite-scroll-top-icon {
+    color: $sc-color-tertiary;
+    position: relative;
+    top: 10px;
+}
+
+/* My Account */
+.overview-profile-email {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.info-card{
+    padding: $sc-base-padding * 3;
+}
+.list-header-view-accordion-body-button-sort{
+  height: $sc-target-size;
+  width: $sc-target-size;
+}
+
+/* Checkout */
+/* Also see CustomStyles > _qs-custom-order-wizard-cartitems-module.scss */
+.order-wizard-address-module-form-placeholder .address-edit {
+    border: none;
+}
+.order-wizard-cart-summary-container {
+    margin-bottom: 0;
+}
+.order-wizard-promocodeform-expander-head-toggle {
+    border: none;
+}
+.order-wizard-promocodeform {
+    @extend .summary-container;
+    border-top: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.item-views-cell-navigable-item-image {
+    padding-left: 0;
+}
+
+
+/* Buttons Border Fix back to Default Tertiary */
+.product-detail-to-quote-add-to-quote-button,
+.product-detail-to-quote-loading,
+.product-list-control-button-wishlist,
+.product-list-control-single-button-wishlist {
+    border: 2px solid $sc-color-link;
+}
+
+/* Product Reviews on PDP */
+.product-reviews-center-container,
+.product-reviews-center-container-header {
+    padding: 0;
+    border: none;
+}
+
+.item-details-more-info-content-container {
+    @media (min-width: $screen-md-min) {
+        padding: 0;
+    }
+}
+
+h3.product-reviews-center-container-header-title { // targetting a specific element
+    @extend h2;
+}
+
+.product-reviews-center-container{
+    background: none;
+}
+
+/* Item Views */
+.item-views-cell-navigable-item-amount-value {
+    font-size: 14px;
+}
+
+/* RELATED ITEMS */
+/* RECENTLY VIEWED */
+.item-relations-related,
+.recently-viewed-items {
+    & h3 {
+        @extend .large-title;
+        margin-bottom: $sc-medium-margin;
+        margin-left: 53px; // Indent to coincide with Staff Picks position in design
+    }
+}
+
+/*
+MERCHANDISING ZONE ITEM
+Rewrites the classes in the suitecommerce/Merchandising module:
+_merchandising-zone-cell-templates.scss
+*/
+.merchandising-zone-container,
+.item-relations-related-row,
+.recently-viewed-items {
+    & .bx-wrapper {
+        max-width: 968px !important; // this overrides the value added in the inline css
+    }
+}
+
+.merchandising-zone-cell-template,
+.item-relations-cell,
+.recently-viewed-cell-item {
+    /* slideWidth: 228 in SC.Configuration.js
+    doesn't seem to be configurable in the ERP backend */
+    width: 242px !important; // this is meant to override the value in SC.Config and must have !important
+    &:hover .item-views-related-item-thumbnail {
+        background-color: $sc-theme-color-lightest;
+    }
+    &:hover .item-views-related-item-text {
+        background-color: $sc-theme-color-lightest;
+        border-bottom: 4px solid $sc-theme-color-link;
+    }
+
+    .item-views-related-item-text {
+        width: 210px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: $sc-base-padding*4 $sc-base-padding $sc-base-padding*2;
+        border-bottom: 4px solid transparent;
+    }
+    .item-view-lead-price,
+    .item-views-price-lead {
+        text-align: left;
+        color: $sc-theme-color-copy !important;
+        font-size: 16px !important;
+        font-family: $sc-theme-primary-font;
+        font-weight: $sc-font-weight-normal;
+    }
+    .item-views-price {
+        text-align: left !important;
+    }
+    .item-views-related-item-rate {
+        width: 92px;
+        margin: 0 !important;
+        text-align: left !important;
+        display: flex !important;
+    }
+    .item-views-related-item-thumbnail {
+        display: inline;
+        min-height: $sc-theme-cell-img-height !important;
+        & img {
+            height: $sc-theme-cell-img-height !important;
+            width: $sc-theme-cell-img-width !important;
+        }
+    }
+    .item-views-related-item-title {
+        text-align: left !important;
+        color: $sc-theme-color-link;
+        font-size: 16px;
+        &:hover {
+            color: $sc-theme-color-link-hover;
+            text-decoration: underline;
+        }
+    }
+    .global-views-star-rating {
+        // remove center alignment
+        margin: 0 !important;
+        display: block !important;
+    }
+
+}

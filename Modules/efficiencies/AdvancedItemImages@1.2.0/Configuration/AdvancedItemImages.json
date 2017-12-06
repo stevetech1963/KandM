@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "advancedItemImages",
+    "title": "Advanced Item Images",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "advancedItemImages.advancedImageManagement": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "advancedItemImages",
+      "title": "Advanced image management",
+      "default": true
+    },
+    "advancedItemImages.showOnlyMainImages": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "advancedItemImages",
+      "title": "show only main images",
+      "default": true
+    }
+  }
+}

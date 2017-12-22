@@ -15,6 +15,7 @@
     },
     "overrides": {
         "suitecommerce/Header@1.2.0/Templates/header_menu.tpl": "Templates/header_menu.tpl",
+        "suitecommerce/Header@1.2.0/Templates/header_logo.tpl": "Templates/header_logo.tpl",
         "themes/summit/overrides/Theme_Header@1.0.0/Templates/qs_header.tpl": "Templates/header.tpl",
         "themes/summit/overrides/Theme_Header@1.0.0/Sass/_qs-header-menu.scss": "Sass/_header-menu.scss",
         "suitecommerce/Header@1.2.0/Sass/_header-menu-myaccount.scss": "Sass/_header-menu-myaccount.scss"

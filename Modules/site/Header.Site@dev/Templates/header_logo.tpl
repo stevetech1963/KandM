@@ -7,7 +7,7 @@
 
  <div id="site-logo" class="content-banner"></div>
 
-<a class="header-logo" href="http://tempdawsontw.hlmtech.com" data-touchpoint="{{headerLinkTouchPoint}}" title="{{headerLinkTitle}}" data-hashtag="{{headerLinkHashtag}}">
+<a class="header-logo" href="http://dawsontireandwheel.com" data-touchpoint="{{headerLinkTouchPoint}}" title="{{headerLinkTitle}}" data-hashtag="{{headerLinkHashtag}}">
 
 {{#if logoUrl}}
 	<img class="header-logo-image" src="{{{logoUrl}}}" alt="{{siteName}}">

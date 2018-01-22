@@ -21,7 +21,9 @@
         "site/Account.Site": "dev",
         "site/OrderWizard.Module.Mounting.Site": "dev",
         "site/CheckoutApplication.Site": "dev",
-        "site/ItemDetails.Site": "dev"
+        "site/ItemDetails.Site": "dev",
+        "site/Cart.Site": "dev",
+        "OrderWizard.Module.Confirmation.Site": "dev"
     },
     "tasksConfig": {
         "javascript": [
@@ -66,7 +68,8 @@
                     "LoginRegister.Register.Taxable.View",
                     "Account.Register.Model.Site",
                     "OrderWizard.Module.Mounting",
-                    "Header.Logo.View.Site"
+                    "Header.Logo.View.Site",
+                    "OrderWizard.Module.Confirmation.Site"
                 ]
             }
         ],

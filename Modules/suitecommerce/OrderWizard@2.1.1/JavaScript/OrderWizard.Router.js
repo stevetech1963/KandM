@@ -7,7 +7,7 @@
 
 //@module OrderWizard
 define('OrderWizard.Router'
-,	[	
+,	[
 		'Wizard.Router'
 	,	'Session'
 	,	'OrderWizard.Step'
@@ -116,7 +116,7 @@ define('OrderWizard.Router'
 					page_header = _('Your Order has been placed').translate();
 					content = _('If you want to review your last order you can go to <a href="#" data-touchpoint="$(0)" data-hashtag="#/ordershistory/view/salesorder/$(1)">Your Account</a>. ')
 						.translate('customercenter', last_order_id) +
-						_('Or you can continue Shopping on our <a href="/" data-touchpoint="home">Home Page</a>. ').translate();
+						_('Or you can continue Shopping on our <a href="http://dawsontireandwheel.com" data-touchpoint="">Home Page</a>. ').translate();
 				}
 				else
 				{

@@ -205,9 +205,9 @@ define(
 				{
 					if (Configuration.currentTouchpoint === 'login')
 					{
-						//This case can happen when more than one concurrent XHR is made and both 
-						//return a user session time-out error 
-						return; 
+						//This case can happen when more than one concurrent XHR is made and both
+						//return a user session time-out error
+						return;
 					}
 					ProfileModel.getInstance().set({
 						isLoggedIn: 'F'

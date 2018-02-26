@@ -121,7 +121,8 @@ define('OrderWizard.Router'
 				else
 				{
 					page_header = _('Your Shopping Cart is empty').translate();
-					content = _('Continue Shopping on our <a href="/" data-touchpoint="home">Home Page</a>. ').translate();
+                    //direct inline override for redirect
+					content = _('Continue Shopping on our <a href="http://dawsontireandwheel.com" data-touchpoint="">Home Page</a>. ').translate();
 				}
 
 				var layout = this.application.getLayout();

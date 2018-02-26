@@ -67,9 +67,10 @@ define('RequestQuoteWizard.Router'
 			{
 				//wizard just finished and user refreshed the page
 				page_header = _('Your Quote Request has been Placed').translate();
+                //edited native code to fix redirect issue, redirect to external site
 				content += _('You can review your quote request at <a href="/quotes/$(0)">Your Account</a> ')
 					.translate(options.quoteid) +
-					_('or continue Shopping on our <a data-touchpoint="home" data-hashtag="#/" href="/">Home Page</a>.').translate();
+					_('or continue Shopping on our <a data-touchpoint="" data-hashtag="" href="http://dawsontireandwheel.com">Home Page</a>.').translate();
 
 				layout.internalError && layout.internalError(content, page_header, _('My Account').translate());
 			}

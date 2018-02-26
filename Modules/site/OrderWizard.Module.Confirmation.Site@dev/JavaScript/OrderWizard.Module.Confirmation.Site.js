@@ -1,7 +1,8 @@
 //module to replace the redirect link to ndw http://dawsontireandwheel.com
+
 define('OrderWizard.Module.Confirmation.Site',[
-    'OrderWizard.Module.Confirmation',
-    'underscore'
+        'OrderWizard.Module.Confirmation',
+        'underscore'
 ], function (
     OrderWizardModuleConfirmation,
     _
@@ -51,5 +52,5 @@ define('OrderWizard.Module.Confirmation.Site',[
                 return res;
             })
 
-    })
-})
+    });
+});

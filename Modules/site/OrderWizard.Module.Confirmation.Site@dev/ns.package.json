@@ -1,10 +1,7 @@
 {
     "gulp": {
         "javascript": [
-            "JavaScript/*.js"
-        ],
-        "templates": [
-            "Templates/*.tpl"
+            "JavaScript/*"
         ]
     }
 }

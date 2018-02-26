@@ -53,11 +53,18 @@
 
 								{{#if showGetQuotesLink}}
 									<a href="#" data-toggle="modal" data-target="#ltl-popup"><span id="ltlquotesbutton" class="order-wizard-shipmethod-module-option-price">Get LTL Quotes</span></a><br><br>
+
+								<script>jQuery('.order-wizard-step-button-continue').hide();</script>
+									
+									
                                    
 								{{else}}
 									<span class="order-wizard-shipmethod-module-option-price">
 									{{rate_formatted}}
 									</span>	
+                                      	
+
+
 								{{/if}}
 
 								
@@ -258,6 +265,8 @@ entityObj["POSTAL_CODE"] =  shipAddr.get('zip')  || "";
 				    }
 				  });
               	jQuery('#divLTLQuotes').show();
+              	jQuery('.order-wizard-step-button-continue').show();
+
 
   
 

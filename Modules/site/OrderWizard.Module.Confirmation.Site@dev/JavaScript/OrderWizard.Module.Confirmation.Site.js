@@ -1,3 +1,5 @@
+/*eslint-disable*/
+
 //module to replace the redirect link to ndw http://dawsontireandwheel.com
 
 define('OrderWizard.Module.Confirmation.Site',[

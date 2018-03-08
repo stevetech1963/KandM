@@ -41,7 +41,8 @@
                     "GoogleAdWords.Fix",
                     "ItemsKeyMapping.Site",
                     "ItemDetails.View.Site",
-                    "Header.Logo.View.Site"
+                    "Header.Logo.View.Site",
+                    "Home.Router.Redirect"
                 ]
             },
             {
@@ -53,7 +54,8 @@
                     "Header.SiteSearch.Disable.View",
                     "GoogleAdWords.Fix",
                     "ItemsKeyMapping.Site",
-                    "Header.Logo.View.Site"
+                    "Header.Logo.View.Site",
+                    "Home.Router.Redirect"
                 ]
             },
             {
@@ -69,7 +71,8 @@
                     "Account.Register.Model.Site",
                     "OrderWizard.Module.Mounting",
                     "Header.Logo.View.Site",
-                    "OrderWizard.Module.Confirmation.Site"
+                    "OrderWizard.Module.Confirmation.Site",
+                    "Home.Router.Redirect"
                 ]
             }
         ],

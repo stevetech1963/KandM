@@ -8,6 +8,7 @@
         ]
     },
     "overrides": {
-        "suitecommerce/SiteSearch@2.1.1/Sass/_site-search.scss": "Sass/_site-search.scss"
+        "suitecommerce/SiteSearch@2.1.1/Sass/_site-search.scss": "Sass/_site-search.scss",
+        "suitecommerce/SiteSearch@2.1.1/Templates/site_search.tpl": "Templates/site_search.tpl"
     }
 }

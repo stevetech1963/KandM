@@ -1,40 +1,42 @@
 .header-banner-message{
-    background-color: lighten($sc-theme-color-primary,3);
-    color: $sc-theme-color-light;
-    font-size: $sc-theme-font-size-medium;
-    font-style: oblique;
-    font-weight: $sc-font-weight-semibold;
-    text-align:right;
-    @media (max-width: $screen-md-min) {
-        display:none;
-    }
+	background-color: lighten($sc-theme-color-primary,3);
+	color: $sc-theme-color-light;
+	font-size: $sc-theme-font-size-medium;
+	font-style: oblique;
+	font-weight: $sc-font-weight-semibold;
+	text-align:right;
+	@media (max-width: $screen-md-min) {
+		display:none;
+	}
 }
 .header-banner-message-float{
-    position:fixed;
-    right:0px;
-    left:0px;
-    z-index: 100;
+	position:fixed;
+	right:0px;
+	left:0px;
+	z-index: 100;
 }
 .header-banner-message-inner{
-    @extend .container;
-    padding: $sc-base-padding*2 0px;
+	@extend .container;
+	padding: $sc-base-padding*2 0px;
 }
 .header-secondary-wrapper{
-    height: $sc-secondary-nav-height;
-    border-bottom: 5px solid $sc-theme-color-primary;
+	height: $sc-secondary-nav-height;
+	border-bottom: 5px solid $sc-theme-color-primary;
 	font-family: $sc-theme-secondary-font;
 	background-color: $sc-theme-nav-bgr-color;
-    @media (max-width: $screen-md-min){
-        height: auto;
-        background-color: $sc-theme-color-light;
-    }
+	@media (max-width: $screen-md-min){
+		height: auto;
+		background-color: $sc-theme-color-light;
+	}
 }
 .header-site-search{
-    position: absolute;
-    width:15%;
+	position: absolute;
+	width:15%;
 	background-color: transparent;
-    display: block;
-    @media(max-width: $screen-md-min){
-        display: none;
-    }
+	display: block;
+	@media(max-width: $screen-md-min){
+		display: none;
+		width: 100%;
+		overflow: hidden;
+	}
 }

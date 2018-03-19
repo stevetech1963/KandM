@@ -54,7 +54,12 @@
 								{{#if showGetQuotesLink}}
 									<a href="#" data-toggle="modal" data-target="#ltl-popup"><span id="ltlquotesbutton" class="order-wizard-shipmethod-module-option-price">Get LTL Quotes</span></a><br><br>
 
-								<script>jQuery('.order-wizard-step-button-continue').hide();</script>
+								<script>
+									jQuery('.order-wizard-step-button-continue').show();
+									if(!SC.ENVIRONMENT.SHIP_TOTAL && !SC.ENVIRONMENT.SHIP_CARRIER){
+										jQuery('.order-wizard-step-button-continue').hide();
+									}
+								</script>
 									
 									
                                    
@@ -144,6 +149,7 @@
               	console.log(JSON.stringify(transBodyFldsObj));
 
               	SC.ENVIRONMENT.SHIP_TOTAL = transBodyFldsObj.SHIP_TOTAL;
+              	SC.ENVIRONMENT.SHIP_CARRIER = transBodyFldsObj.CARRIER_NAME;
 
 
              	var model = SC.Application('Checkout').getLayout().currentView.model;
@@ -159,6 +165,7 @@
 				jQuery('#divLTLQuotes').html('');
 				jQuery('#ltl-popup').modal('toggle');
 				jQuery('a[data-value="17012"]').click();
+				jQuery('.order-wizard-step-button-continue').show(); 
 
 
 
@@ -265,7 +272,7 @@ entityObj["POSTAL_CODE"] =  shipAddr.get('zip')  || "";
 				    }
 				  });
               	jQuery('#divLTLQuotes').show();
-              	jQuery('.order-wizard-step-button-continue').show();
+              	
 
 
   

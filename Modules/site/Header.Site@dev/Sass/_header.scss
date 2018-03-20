@@ -36,7 +36,6 @@
 	display: block;
 	@media(max-width: $screen-md-min){
 		display: none;
-		width: 100%;
-		overflow: hidden;
+		width: 94%;
 	}
 }

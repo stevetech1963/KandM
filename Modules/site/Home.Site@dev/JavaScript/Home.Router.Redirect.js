@@ -8,13 +8,12 @@ define('Home.Router.Redirect', [
     'use strict';
 
     _.extend(HomeRouter.prototype, {
-        homePage: function ()
-    		{
-    			// var view = new HomeView({application: this.application});
-                window.location = 'https://www.dawsontireandwheel.com';
+        homePage: function () {
+            // var view = new HomeView({application: this.application});
+            window.location = 'https://www.dawsontireandwheel.com';
 
 
-    			//view.showContent();
-    		}
-    })
-})
+            // view.showContent();
+        }
+    });
+});

@@ -52,11 +52,11 @@
 					</ul>
 				</div>
 				<div class="header-menu-profile" data-view="Header.Profile"></div>
-				<!-- <div class="header-menu-searchmobile">
+				<div class="header-menu-searchmobile">
 					<button class="header-menu-searchmobile-link" data-action="show-sitesearch" title="{{translate 'Search'}}">
 						<i class="header-menu-searchmobile-icon"></i>
 					</button>
-				</div> -->
+				</div>
 
 				<div class="header-menu-cart">
 					<div class="header-menu-cart-dropdown" >
@@ -73,3 +73,5 @@
 <div class="header-sidebar-overlay" data-action="header-sidebar-hide"></div>
 <div class="header-secondary-wrapper" data-view="Header.Menu" data-phone-template="header_sidebar" data-tablet-template="header_sidebar">
 </div>
+
+<div class="header-site-search" data-view="SiteSearch" data-type="SiteSearch"></div>

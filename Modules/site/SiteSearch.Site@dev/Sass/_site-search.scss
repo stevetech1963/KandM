@@ -47,6 +47,9 @@
 	left: 0px;
 	font-size: 20px;
 	padding:6px;
+	@media(max-width: $screen-md-min){
+		padding: 6px 0px 0px 12px;
+	}
 }
 
 .site-search-input-reset {

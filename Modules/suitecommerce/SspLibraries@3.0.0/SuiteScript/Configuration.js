@@ -50,7 +50,7 @@ define('Configuration', ['Utils', 'underscore',	'Models.Init', 'Console'], funct
 		}
 	};
 
-	var domain = session.getSiteSettings(['touchpoints']).touchpoints.home.match(/^http(s?)\:\/\/([^\/?#]+)(?:[\/?#]|$)/i)[2];
+	var domain = ModelsInit.session.getEffectiveShoppingDomain();
 
 	SC.Configuration = mergeConfigurationObjects(SC.Configuration, typeof(ConfigurationManifestDefaults) === 'undefined' ? {} : ConfigurationManifestDefaults);
 

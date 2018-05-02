@@ -271,7 +271,7 @@ source.push('deploy-version');
 
 gulp.task('deploy-version', deployVersion);
 
-source.push('eslint');
+//source.push('eslint');
 
 gulp.task('deploy',	source, deploy);
 gulp.task('deploy-no-deps', deploy);

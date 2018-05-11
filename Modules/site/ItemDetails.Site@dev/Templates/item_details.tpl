@@ -51,6 +51,14 @@
 							{{sku}}
 						</span>
 					</div>
+                    {{#if showleadTime}}
+                    <div class="item-details-leadtime-container">
+                        <p class="item-details-stock-msg-leadtime">
+                            <i class="item-views-stock-icon-description"></i>
+                            Estimated Days: {{leadTime}}
+                       </p>
+                   </div>
+                    {{/if}}
 					<div data-view="Item.Stock"></div>
 				</section>
 
@@ -78,7 +86,7 @@
 
 							<div class="item-details-options-content-price" data-view="Item.Price"></div>
 
-							<div class="item-details-options-content-stock"  data-view="Item.Stock"></div>
+                            <div class="item-details-options-content-stock"  data-view="Item.Stock"></div>
 
 							<div data-view="ItemDetails.Options"></div>
 						</div>

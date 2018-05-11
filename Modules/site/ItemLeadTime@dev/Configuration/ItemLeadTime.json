@@ -1,0 +1,33 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "itemleadtime",
+        "group": "shoppingApplication",
+        "title": "Lead Time",
+        "description": "Configuration for extra Lead Time for items depending on the Manufacturer"
+    },
+    "properties": {
+        "itemleadtimeMasterOptions": {
+            "group": "shoppingApplication",
+            "subtab": "itemleadtime",
+            "type": "array",
+            "title": "Item Lead Time",
+            "description": "Extra Lead time Per Manufacturer",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "manufacturer": {
+                        "type": "string",
+                        "title": "manufacturer",
+                        "description": ""
+                    },
+                    "days": {
+                        "type": "integer",
+                        "title": "days",
+                        "description": "The extra days for lead time"
+                    }
+                }
+            }
+        }
+    }
+}

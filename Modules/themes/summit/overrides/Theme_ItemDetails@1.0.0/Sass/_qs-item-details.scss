@@ -528,3 +528,9 @@
 	padding-left: 0;
 	padding-right: 0;
 }
+
+.item-details-leadtime-container{
+    background-color: #f0f8ff;
+    @extend .stock-info-in;
+	@extend .item-views-stock-msg;
+}

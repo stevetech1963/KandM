@@ -1,7 +1,8 @@
 define('GiftWrap.Item.Options.View', [
     'ItemViews.Option.View',
     'GiftWrap.Configuration',
-    'underscore'
+    'underscore',
+    'Backbone.PluginInstaller'
 ], function GiftWrapOptionView(
     ItemViewsOptionView,
     Configuration,

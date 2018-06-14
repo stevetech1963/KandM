@@ -2,7 +2,8 @@ define('GiftWrap.SelectedOption.View', [
     'ItemViews.SelectedOption.View',
     'GiftWrap.Configuration',
     'bignumber',
-    'underscore'
+    'underscore',
+    'Backbone.PluginInstaller'
 ], function GiftWrapOptionView(
     ItemViewsSelectedOptionView,
     Configuration,

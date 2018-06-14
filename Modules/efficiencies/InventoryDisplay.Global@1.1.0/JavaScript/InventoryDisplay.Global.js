@@ -42,7 +42,7 @@ define('InventoryDisplay.Global', [
                      */
                     $el.find('[data-view="Item.Stock"]').each(function eachPlaceholder() {
                         var myClass = this.className ? (this.className + '-details') : '';
-                        jQuery(this).after('<div data-view="Item.InventoryDisplay" class="' + myClass + '"/>');
+                        //jQuery(this).after('<div data-view="Item.InventoryDisplay" class="' + myClass + '"/>');
                     });
                 }
             });

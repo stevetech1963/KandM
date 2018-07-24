@@ -42,7 +42,7 @@
 
     </div>
 
-    <div class="footer-content-newsletter-social">
+    <!--<div class="footer-content-newsletter-social">
         <div class="footer-content-newsletter" data-view="FooterContent"></div>
         {{#if socialMediaLinks}}
         <div class="footer-content-social">
@@ -54,7 +54,7 @@
             </ul>
         </div>
         {{/if}}
-    </div>
+    </div>-->
 
     <div class="footer-columns">
         {{#if col1Links}}

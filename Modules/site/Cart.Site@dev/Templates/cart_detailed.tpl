@@ -40,15 +40,15 @@
 		<div data-type="saved-for-later-placeholder" class="cart-detailed-savedforlater">
 		</div>
 
-		<div data-view="RecentlyViewed.Items" class="cart-detailed-recently-viewed" itemscope="" itemtype="http://schema.org/ItemList"></div>
-		<div data-view="Related.Items" class="cart-detailed-related" itemscope="" itemtype="http://schema.org/ItemList"></div>
-		<div data-view="Correlated.Items" class="cart-detailed-correlated" itemscope="" itemtype="http://schema.org/ItemList"></div>
+		<div data-view="RecentlyViewed.Items" class="cart-detailed-recently-viewed" itemscope="" itemtype="https://schema.org/ItemList"></div>
+		<div data-view="Related.Items" class="cart-detailed-related" itemscope="" itemtype="https://schema.org/ItemList"></div>
+		<div data-view="Correlated.Items" class="cart-detailed-correlated" itemscope="" itemtype="https://schema.org/ItemList"></div>
 	</div>
 {{else}}
 	<section class="cart-detailed-body-empty">
 		<h2 class="cart-detailed-body-empty-title">{{translate 'Your Shopping Cart is empty'}}</h2>
 		<p class="cart-detailed-body-empty-info">
-			{{translate 'Continue Shopping on our <a href="http://dawsontireandwheel.com" data-touchpoint="home">Home Page</a>' }}
+			{{translate 'Continue Shopping on our <a href="https://www.dawsontireandwheel.com" data-touchpoint="home">Home Page</a>' }}
 		</p>
 		<div data-type="saved-for-later-placeholder" class="cart-detailed-row-fluid"></div>
 	</section>

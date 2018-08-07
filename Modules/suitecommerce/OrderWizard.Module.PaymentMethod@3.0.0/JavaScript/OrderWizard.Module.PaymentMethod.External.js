@@ -46,7 +46,7 @@ define(
 			,	status_reject_value = Configuration.get('siteSettings.externalCheckout.' + this.options.record_type.toUpperCase() + '.statusRejectValue' , 'REJECT')
 			,	status_parameter_name = Configuration.get('siteSettings.externalCheckout.' + this.options.record_type.toUpperCase() + '.statusParameterName' , 'status')
 			,	origin = window.location.origin ? window.location.origin : (window.location.protocol + '//' + window.location.hostname + (window.location.port ? (':' + window.location.port) : ''))
-			,	url = origin + _.getAbsoluteUrl('external_payment.ssp')
+			,	url = _.getAbsoluteUrl('external_payment.ssp')
 			,	current_touchpoint = Configuration.get('currentTouchpoint')
 			,	thankyouurl_parameters = {n: n, externalPaymentDone: 'T', touchpoint: current_touchpoint, recordType: this.options.record_type  || 'salesorder' }
 			,	errorurl_parameters =  {n: n, externalPaymentDone: 'T', touchpoint: current_touchpoint, recordType: this.options.record_type || 'salesorder' }

@@ -40,7 +40,7 @@ define('OrderWizard.Module.Confirmation.Site',[
     			{
     				this.$el.html('<h3>' + _('Your Order has been placed').translate()+ '</h3>');
                     //edited native code to fix redirect issue, redirect to external site
-    				this.$el.append('<p>'+  _('Continue Shopping on our <a href="http://dawsontireandwheel.com" data-touchpoint="">Home Page</a>. ').translate() +'</p>');
+    				this.$el.append('<p>'+  _('Continue Shopping on our <a href="https://www.dawsontireandwheel.com" data-touchpoint="">Home Page</a>. ').translate() +'</p>');
     			}
 
     		},
@@ -48,7 +48,7 @@ define('OrderWizard.Module.Confirmation.Site',[
             getContext: _.wrap(OrderWizardModuleConfirmation.prototype.getContext, function (fn) {
                 var res = fn.apply(this, _.toArray(arguments).slice(1));
                 _.extend(res, {
-                    continueURL: 'http://dawsontireandwheel.com'
+                    continueURL: 'https://www.dawsontireandwheel.com'
                 });
 
                 return res;

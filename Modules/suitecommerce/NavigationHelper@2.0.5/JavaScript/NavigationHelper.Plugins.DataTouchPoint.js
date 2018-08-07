@@ -11,14 +11,15 @@ define('NavigationHelper.Plugins.DataTouchPoint'
 	,	'Session'
 	,	'underscore'
 	,	'Backbone'
-	,	'UrlHelper'
 	,	'Utils'
+	,	'UrlHelper'
 	]
 ,	function (
 		Tracker
 	,	Session
 	,	_
 	,	Backbone
+	,	Utils
 	)
 {
 	'use strict';
@@ -61,7 +62,7 @@ define('NavigationHelper.Plugins.DataTouchPoint'
 		{
 			var url = context.url;
 			// if target is shopping (http)
-			if (!~url.indexOf('https:'))
+			if (Utils.isShoppingDomain())
 			{
 				var locale_host = dataTouchPointPlugins.getLocaleHost(SC.ENVIRONMENT.currentLanguage.locale);
 				if (locale_host)

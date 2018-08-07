@@ -5,13 +5,13 @@
 	may use this code subject to the terms that govern your access and use.
 }}
 
-<div class="product-reviews-preview-review" itemprop="review" itemscope itemtype="http://schema.org/Review" data-id="{{reviewId}}">
+<div class="product-reviews-preview-review" itemprop="review" itemscope itemtype="https://schema.org/Review" data-id="{{reviewId}}">
 	<div class="product-reviews-preview-review-rating">
 		{{#if isReviewRatingPerAttributesLegthGreaterThan0}}
 			<div data-view="Global.StarRatingAttribute" class="product-reviews-preview-review-rating-attribute"></div>
 		{{/if}}
 
-		<div data-view="Global.StarRating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"></div>
+		<div data-view="Global.StarRating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating"></div>
 	</div>
 	<div class="product-reviews-preview-review-content">
 

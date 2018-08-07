@@ -1,8 +1,8 @@
 {{!
-	© 2016 NetSuite Inc.
-	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
-	provided, however, if you are an authorized user with a NetSuite account or log-in, you
-	may use this code subject to the terms that govern your access and use.
+    © 2016 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
 }}
 
 <div class="product-reviews-form-confirmation">
@@ -10,10 +10,10 @@
     <div class="product-reviews-form-confirmation-divider-desktop"></div>
     <div class="product-reviews-form-confirmation-divider"></div>
     <div class="product-reviews-form-confirmation-message">
-		{{{confirmationMessage}}}
-		<a href="{{itemUrl}}" class="product-reviews-form-confirmation-button-back">
-			{{translate 'Back to '}} {{{productTitle}}}
-		</a>
+        {{{confirmationMessage}}}
+        <a href="{{itemUrl}}" class="product-reviews-form-confirmation-button-back">
+            {{translate 'Back to '}} {{{productTitle}}}
+        </a>
     </div>
     <div class="product-reviews-form-confirmation-item-cell">
         <div data-view="Facets.ItemCell" data-template="facets_item_cell_list"></div>
@@ -21,7 +21,7 @@
     <div class="product-reviews-form-confirmation-content">
         <div class="product-reviews-form-confirmation-review-rating">
             <div data-view="Global.StarRatingAttribute" class="product-reviews-form-confirmation-rating-attribute"></div>
-            <div data-view="Global.StarRating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"></div>
+            <div data-view="Global.StarRating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating"></div>
         </div>
         <div class="product-reviews-form-confirmation-content-review">
 

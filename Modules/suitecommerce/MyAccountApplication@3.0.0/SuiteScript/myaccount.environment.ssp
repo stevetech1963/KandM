@@ -144,6 +144,13 @@
 <% if (SiteSettings) { %>
 	// Site Settings Info
 	SC.ENVIRONMENT.siteSettings = <%= JSON.stringify(SiteSettings) %>;
+
+	// SCTouchpoint indicates the touchpoint the user is effectively in. We can only know with certain this in the proper ssp
+	// because there is still code that depends on the touchpoint
+	// myaccount value is added just in case someone needs it
+	// when in single ssp check if this it's necessary
+	SC.ENVIRONMENT.SCTouchpoint = 'myaccount';
+
 	// Site site (ADVANCED or STANDARD)
 	SC.ENVIRONMENT.siteType = '<%= SiteSettings.sitetype %>';
 <% } %>
@@ -251,7 +258,7 @@ document.write('<script src="<%= session.getAbsoluteUrl('checkout', 'languages/e
 
 	if(!SC.ENVIRONMENT.baseUrl)
 	{
-		SC.ENVIRONMENT.baseUrl = '<%=  session.getAbsoluteUrl(request.getURL().indexOf('https:') === 0 ? 'checkout' : 'shopping', '/{{file}}') %>';
+		SC.ENVIRONMENT.baseUrl = '<%=  session.getAbsoluteUrl('checkout', '/{{file}}') %>';
 	}
 
 <% } %>

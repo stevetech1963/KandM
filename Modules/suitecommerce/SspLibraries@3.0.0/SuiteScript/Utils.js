@@ -388,6 +388,58 @@ define('Utils'
 			return ModelsInit.context.getFeature(feature);
 		}
 
+		// @method isCheckoutDomain determines if we are in a secure checkout
+		// domain or in a secure single domain environment
+		// @return {Boolean} true if in checkout or in single domain
+	,	isCheckoutDomain: function isCheckoutDomain()
+		{
+			return ModelsInit.session.isCheckoutSupported();
+		}
+
+		// @method isShoppingDomain determines if we are in shopping domain (secure or non secure)
+		//  or in a secure single domain environment
+		// @return {Boolean} true if in shopping or single domain
+	,	isShoppingDomain: function isShoppingDomain()
+		{
+			return ModelsInit.session.isShoppingSupported();
+		}
+
+		// @method isSingleDomain determines if we are in a single domain environment
+		// @return {Boolean} true if single domain
+	,	isSingleDomain: function isSingleDomain()
+		{
+			return ModelsInit.session.isShoppingSupported() && ModelsInit.session.isCheckoutSupported();
+		}
+
+		// @method isInShopping determines if we are in shopping ssp
+		// @return {Boolean} true if in shopping domain, false if in checkout or myaccount
+	,	isInShopping: function isInShopping (request) 
+		{
+			return this.isShoppingDomain() && (request.getHeader('X-SC-Touchpoint') === 'shopping' || request.getParameter('X-SC-Touchpoint') === 'shopping');
+		}
+
+		// @method isInCheckout determines if we are in checkout ssp or my account ssp
+		// @return {Boolean} true if in checkout domain
+	,	isInCheckout: function isInCheckout (request)
+		{
+			var self = this;
+			
+			if (!self.isSingleDomain())
+			{
+				return self.isCheckoutDomain();
+			}
+			else
+			{
+				var paypal_complete = ModelsInit.context.getSessionObject('paypal_complete') === 'T'
+				,	is_in_checkout = request.getHeader('X-SC-Touchpoint') === 'checkout' || 
+								request.getHeader('X-SC-Touchpoint') === 'myaccount' || 
+								request.getParameter('X-SC-Touchpoint') === 'checkout' || 
+								request.getParameter('X-SC-Touchpoint') === 'myaccount';
+
+				return self.isCheckoutDomain() && (is_in_checkout || paypal_complete);
+			}
+		}
+
 		// Not used for now because there is only Full permissions on accountingpreferences
 	,	_isAccountingPreferenceEnabled: function (preference)
 		{

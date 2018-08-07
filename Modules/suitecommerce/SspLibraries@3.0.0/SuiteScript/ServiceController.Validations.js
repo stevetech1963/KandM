@@ -10,13 +10,13 @@ define(
 	'ServiceController.Validations'
 ,	[
 		'underscore'
-
+	,	'Utils'
 	,	'Application'
 	,	'Models.Init'
 	]
 ,	function (
 		_
-
+	,	Utils
 	,	Application
 	,	ModelsInit
 	)
@@ -88,7 +88,7 @@ define(
 		// @method validateSecure If http protocol is not secure, throw an error
 	,	requireSecure: function ()
 		{
-			if (!~this.request.getURL().indexOf('https'))
+			if (!Utils.isCheckoutDomain())
 			{
 				throw methodNotAllowedError;
 			}
@@ -119,7 +119,7 @@ define(
 	,	checkLoggedInCheckout: function()
 		{
 			//if SECURE AND NOT loggedIn
-			if (~request.getURL().indexOf('https') && !session.isLoggedIn2())
+			if (Utils.isInCheckout(request) && !session.isLoggedIn2())
 			{
 				throw unauthorizedError;
 			}

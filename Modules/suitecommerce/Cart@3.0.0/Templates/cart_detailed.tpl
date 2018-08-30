@@ -40,9 +40,9 @@
 		<div data-type="saved-for-later-placeholder" class="cart-detailed-savedforlater">
 		</div>
 
-		<div data-view="RecentlyViewed.Items" class="cart-detailed-recently-viewed" itemscope="" itemtype="http://schema.org/ItemList"></div>
-		<div data-view="Related.Items" class="cart-detailed-related" itemscope="" itemtype="http://schema.org/ItemList"></div>
-		<div data-view="Correlated.Items" class="cart-detailed-correlated" itemscope="" itemtype="http://schema.org/ItemList"></div>
+		<div data-view="RecentlyViewed.Items" class="cart-detailed-recently-viewed" itemscope="" itemtype="https://schema.org/ItemList"></div>
+		<div data-view="Related.Items" class="cart-detailed-related" itemscope="" itemtype="https://schema.org/ItemList"></div>
+		<div data-view="Correlated.Items" class="cart-detailed-correlated" itemscope="" itemtype="https://schema.org/ItemList"></div>
 	</div>
 {{else}}
 	<section class="cart-detailed-body-empty">

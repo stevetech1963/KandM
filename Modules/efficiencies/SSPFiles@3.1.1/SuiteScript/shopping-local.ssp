@@ -133,7 +133,7 @@
 			var datetime = new Date().getTime();
 			var e = document.getElementsByTagName("script")[0];
 			var d = document.createElement("script");
-			d.src = '<%= session.getAbsoluteUrl("shopping", "shopping.user.environment.ssp?lang=" + Language + "&cur=" + Currency) %>&t=' + datetime + "";
+			d.src = '<%= session.getAbsoluteUrl("shopping", "shopping.user.environment.ssp?lang=" + Language + "&cur=" + Currency + "&X-SC-Touchpoint=shopping") %>&t=' + datetime + "";
 			d.type = "text/javascript";
 			// d.async = true;
 			// d.defer = true;
@@ -148,7 +148,7 @@
     <script src="/cms/2/cms.js"></script>
 <% } %>
 
-<script src="<%= session.getAbsoluteUrl("shopping", "shopping.environment.ssp?lang=" + Language + "&cur=" + Currency) %>&t={{timestamp}}" ></script>
+<script src="<%= session.getAbsoluteUrl("shopping", "shopping.environment.ssp?lang=" + Language + "&cur=" + Currency + "&X-SC-Touchpoint=shopping") %>&t={{timestamp}}" ></script> 
 <script type="text/javascript" src="<%= ROOT %>languages/shopping_<%=Language%>.js?t={{timestamp}}" ></script>
 <script type="text/javascript" src="<%= ROOT %>javascript/require.js" data-main="<%= ROOT %>javascript/shopping.js" ></script>
 <script type="text/javascript">

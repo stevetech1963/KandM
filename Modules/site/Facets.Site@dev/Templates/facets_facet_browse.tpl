@@ -29,7 +29,7 @@
 			properly <div data-view="Facets.FacetedNavigation.Item" data-facet-id="custitem1"></div>
 			 -->
 
-			<div class="facets-facet-browse-results" itemscope="" itemtype="http://schema.org/ItemList">
+			<div class="facets-facet-browse-results" itemscope="" itemtype="https://schema.org/ItemList">
 
 				{{#if isCategory}}
 					<div class="facets-facet-browse-category">

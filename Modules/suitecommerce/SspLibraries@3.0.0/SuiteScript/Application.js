@@ -51,17 +51,13 @@ define(
 		// @return {Object} an object with many environment properties serializable to JSON.
 	,	getEnvironment: function (request)
 		{
-			var isSecure = request.getURL().indexOf('https:') === 0;
 
-			// HEADS UP!! This hack is because currently CMS doesn't support Secure Domain yet
-			// When CMS does support it, delete this
-			SC.Configuration.cms.useCMS = !isSecure && SC.Configuration.cms.useCMS && ModelsInit.context.getSetting('FEATURE', 'ADVANCEDSITEMANAGEMENT') === 'T';
+			SC.Configuration.cms.useCMS = SC.Configuration.cms.useCMS && ModelsInit.context.getSetting('FEATURE', 'ADVANCEDSITEMANAGEMENT') === 'T';
 
 			// Sets Default environment variables
-			//,	isSecure = request.getURL().indexOf('https:') === 0
 			var siteSettings = ModelsInit.session.getSiteSettings(['currencies', 'languages'])
 			,	result = {
-					baseUrl: ModelsInit.session.getAbsoluteUrl(isSecure ? 'checkout' : 'shopping', '/{{file}}')
+					baseUrl: ModelsInit.session.getAbsoluteUrl(Utils.isInCheckout(request) ? 'checkout' : 'shopping', '/{{file}}')
 				,	currentHostString: Application.getHost()
 				,	availableHosts: SC.Configuration.hosts || []
 				,	availableLanguages: siteSettings.languages || []
@@ -75,7 +71,7 @@ define(
 
 			// If there are hosts associated in the site we iterate them to check which we are in
 			// and which language and currency we are in
-			if (result.availableHosts.length && !isSecure)
+			if (result.availableHosts.length && Utils.isShoppingDomain())
 			{
 				var pushLanguage = function (language)
 				{

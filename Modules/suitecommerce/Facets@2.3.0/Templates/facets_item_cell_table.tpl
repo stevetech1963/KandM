@@ -5,7 +5,7 @@
 	may use this code subject to the terms that govern your access and use.
 }}
 
-<div class="facets-item-cell-table" itemprop="itemListElement"  data-item-id="{{itemId}}" itemscope itemtype="http://schema.org/Product" data-track-productlist-list="{{track_productlist_list}}" data-track-productlist-category="{{track_productlist_category}}" data-track-productlist-position="{{track_productlist_position}}" data-sku="{{sku}}">
+<div class="facets-item-cell-table" itemprop="itemListElement"  data-item-id="{{itemId}}" itemscope itemtype="https://schema.org/Product" data-track-productlist-list="{{track_productlist_list}}" data-track-productlist-category="{{track_productlist_category}}" data-track-productlist-position="{{track_productlist_position}}" data-sku="{{sku}}">
 	<meta itemprop="url" content="{{url}}">
 	<div class="facets-item-cell-table-image-wrapper">
 		<a class="facets-item-cell-table-link-image" href="{{url}}">
@@ -31,7 +31,7 @@
 		<div data-view="ItemViews.Price"></div>
 	</div>
 	{{#if showRating}}
-	<div class="facets-item-cell-table-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"  data-view="GlobalViews.StarRating">
+	<div class="facets-item-cell-table-rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"  data-view="GlobalViews.StarRating">
 	</div>
 	{{/if}}
 	<div data-view="ItemDetails.Options"></div>

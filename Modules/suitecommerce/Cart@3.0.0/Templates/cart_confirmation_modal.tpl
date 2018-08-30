@@ -9,7 +9,7 @@
 	<div class="cart-confirmation-modal-img">
 		<img data-loader="false" src="{{resizeImage item._thumbnail.url 'main'}}" alt="{{item._thumbnail.altimagetext}}">
 	</div>
-	<div class="cart-confirmation-modal-details" itemscope itemtype="http://schema.org/Product">
+	<div class="cart-confirmation-modal-details" itemscope itemtype="https://schema.org/Product">
 		<a href="{{item._url}}" class="cart-confirmation-modal-item-name">{{item._name}}</a>
 		<div class="cart-confirmation-modal-price">
 			<div data-view="Item.Price"></div>

@@ -111,6 +111,11 @@
 
 	SC.ENVIRONMENT.siteSettings = <%= JSON.stringify(SiteSettings) %>;
 
+	// SCTouchpoint indicates the touchpoint the user is effectively in. We can only know with certain this in the proper ssp
+	// because there is still code that depends on the touchpoint
+	// when in single ssp check if this it's necessary
+	SC.ENVIRONMENT.SCTouchpoint = 'shopping';
+
 	SC.DEFAULT_SESSION = {
 		currency: <%= JSON.stringify(_.find(SiteSettings.currencies, function(c) { return c.isdefault === 'T'; })) %>
 	,	language: <%= JSON.stringify(_.find(SiteSettings.languages, function(l) { return l.isdefault === 'T'; })) %>
@@ -166,7 +171,7 @@ document.documentElement.className = SC.ENVIRONMENT.isTouchEnabled ? 'touch' : '
 
 	if (!SC.ENVIRONMENT.baseUrl)
 	{
-		SC.ENVIRONMENT.baseUrl = '<%=  session.getAbsoluteUrl(request.getURL().indexOf('https:') === 0 ? 'checkout' : 'shopping', '/{{file}}') %>';
+		SC.ENVIRONMENT.baseUrl = '<%=  session.getAbsoluteUrl('shopping', '/{{file}}') %>';
 	}
 <% } %>
 

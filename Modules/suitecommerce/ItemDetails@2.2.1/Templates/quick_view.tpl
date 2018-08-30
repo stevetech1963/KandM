@@ -5,7 +5,7 @@
 	may use this code subject to the terms that govern your access and use.
 }}
 
-<div class="quick-view-confirmation-modal" itemscope itemtype="http://schema.org/Product">
+<div class="quick-view-confirmation-modal" itemscope itemtype="https://schema.org/Product">
 	<div class="quick-view-confirmation-modal-img">
 		<div data-view="ItemDetails.ImageGallery"></div>
 	</div>

@@ -26,7 +26,7 @@
 		</div>
 
 		{{#if showRating}}
-		<p class="product-list-display-full-rating" itemscope itemtype="http://schema.org/AggregateRating">
+		<p class="product-list-display-full-rating" itemscope itemtype="https://schema.org/AggregateRating">
 			<span data-view="GlobalViews.StarRating"></span>
 		</p>
 		{{/if}}

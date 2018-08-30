@@ -35,8 +35,7 @@
 		external_parameters = require('ExternalPayment.Model').getParametersFromRequest(request) || {};
 		Profile = require('Profile.Model').get();
 		Utils = require('Utils');
-		siteId = SiteSettings.siteid;
-		is_secure = request.getURL().indexOf('https:') === 0;
+		siteId = SiteSettings.siteid; d
 
 		productlist_bundle_present = Utils.recordTypeExists('customrecord_ns_pl_productlist')
 
@@ -104,7 +103,7 @@
 			console.warn('Failed to load release metadata.');
 		}
 
-		if (session.isLoggedIn2() && is_secure)
+		if (session.isLoggedIn2() && Utils.isCheckoutDomain()))
 		{
 			Address =  require('Address.Model').list();
 			CreditCard = require('CreditCard.Model').list();
@@ -137,6 +136,12 @@
 	var site_settings_json = JSON.stringify(SiteSettings).replace(/<body *[^/]*?>/ig, '').replace(/<\/body*?>/ig, '')
 	%>
 	SC.ENVIRONMENT.siteSettings = <%= site_settings_json %>;
+
+	// SCTouchpoint indicates the touchpoint the user is effectively in. We can only know with certain this in the proper ssp
+	// because there is still code that depends on the touchpoint
+	// when in single ssp check if this it's necessary
+	SC.ENVIRONMENT.SCTouchpoint = 'checkout';
+
 	// Site site (ADVANCED or STANDARD)
 	SC.ENVIRONMENT.siteType = '<%= SiteSettings.sitetype %>';
 <% } %>
@@ -244,7 +249,7 @@ document.documentElement.className = (SC.ENVIRONMENT.isTouchEnabled) ? "touch" :
 
 	if(!SC.ENVIRONMENT.baseUrl)
 	{
-		SC.ENVIRONMENT.baseUrl = '<%=  session.getAbsoluteUrl(is_secure ? 'checkout' : 'shopping', '/{{file}}') %>';
+		SC.ENVIRONMENT.baseUrl = '<%=  session.getAbsoluteUrl('checkout', '/{{file}}') %>';
 	}
 
 <% } %>

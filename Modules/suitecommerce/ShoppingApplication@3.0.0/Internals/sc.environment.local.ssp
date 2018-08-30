@@ -14,7 +14,8 @@ var	Environment
 ,	Content
 ,	Merchandising
 ,	Error
-,	Application;
+,	Application
+,	Utils;
 
 try {
 	Application = require('Application');
@@ -23,6 +24,7 @@ try {
 	LiveOrder = require('LiveOrder.Model').get();
 	Profile = require('Profile.Model').get();
 	siteId = SiteSettings.siteid;
+	Utils = require('Utils');
 
 	// Content depends on the instalation and inclusion of the
 	// ContentDeliverService provided as a separated boundle
@@ -130,7 +132,7 @@ loadScript({
 
 	if(!SC.ENVIRONMENT.baseUrl)
 	{
-		SC.ENVIRONMENT.baseUrl = '<%=  session.getAbsoluteUrl(request.getURL().indexOf('https:') === 0 ? 'checkout' : 'shopping', '/{{file}}') %>';
+		SC.ENVIRONMENT.baseUrl = '<%=  session.getAbsoluteUrl(Utils.isInCheckout(request) ? 'checkout' : 'shopping', '/{{file}}') %>';
 	}
 <% } %>
 

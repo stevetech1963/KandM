@@ -1,3 +1,4 @@
+﻿
 {{!
 	© 2016 NetSuite Inc.
 	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
@@ -43,7 +44,7 @@
     </div>
 
     <div class="footer-content-newsletter-social">
-        <div class="footer-content-newsletter" data-view="FooterContent"></div>
+        <!--<div class="footer-content-newsletter" data-view="FooterContent"></div>-->
         {{#if socialMediaLinks}}
         <div class="footer-content-social">
             <ul class="footer-content-social-list">

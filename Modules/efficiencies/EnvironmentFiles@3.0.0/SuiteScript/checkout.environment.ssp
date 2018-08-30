@@ -35,7 +35,7 @@
 		external_parameters = require('ExternalPayment.Model').getParametersFromRequest(request) || {};
 		Profile = require('Profile.Model').get();
 		Utils = require('Utils');
-		siteId = SiteSettings.siteid; d
+		siteId = SiteSettings.siteid;
 
 		productlist_bundle_present = Utils.recordTypeExists('customrecord_ns_pl_productlist')
 
@@ -103,7 +103,7 @@
 			console.warn('Failed to load release metadata.');
 		}
 
-		if (session.isLoggedIn2() && Utils.isCheckoutDomain()))
+		if (session.isLoggedIn2() && Utils.isCheckoutDomain())
 		{
 			Address =  require('Address.Model').list();
 			CreditCard = require('CreditCard.Model').list();

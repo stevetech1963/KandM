@@ -12,7 +12,7 @@
 		<div id="banner-content-top" class="item-details-banner-top"></div>
 	</header>
 	<div class="item-details-divider-desktop"></div>
-	<article class="item-details-content" itemscope itemtype="http://schema.org/Product">
+	<article class="item-details-content" itemscope itemtype="https://schema.org/Product">
 		<meta itemprop="url" content="{{model._url}}">
 		<div id="banner-details-top" class="item-details-banner-top-details"></div>
 
@@ -20,7 +20,7 @@
 			<div class="item-details-content-header">
 				<h1 class="item-details-content-header-title" itemprop="name">{{model._pageHeader}}</h1>
 				{{#if showReviews}}
-				<div class="item-details-rating-header" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+				<div class="item-details-rating-header" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
 					<div class="item-details-rating-header-rating" data-view="Global.StarRating"></div>
 				</div>
 				{{/if}}

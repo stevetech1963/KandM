@@ -117,6 +117,10 @@ define(
 			settings.shopperCurrency = session.getShopperCurrency();
 			settings.touchpoints = this.getTouchPoints();
 
+			settings.checkoutSupported = Utils.isCheckoutDomain();
+			settings.shoppingSupported = Utils.isShoppingDomain();
+			settings.isSingleDomain = settings.checkoutSupported && settings.shoppingSupported;
+
 			// delete unused fields
 			delete settings.entrypoints;
 

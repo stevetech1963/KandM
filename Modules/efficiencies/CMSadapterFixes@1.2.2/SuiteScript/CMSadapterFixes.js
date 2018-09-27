@@ -3,13 +3,15 @@ define('CMSadapterFixes',	[
     'Configuration',
     'Models.Init',
     'Application',
-    'underscore'
+    'underscore',
+    'Utils'
 ], function CMSSandboxFix(
     CMSAdapterModel,
     Configuration,
     CommerceAPI,
     Application,
-    _
+    _,
+    Utils
 ) {
     'use strict';
 
@@ -38,7 +40,7 @@ define('CMSadapterFixes',	[
         getPages: function getPages() {
             var cmsRequestT0 = new Date().getTime();
             var cmsPagesHeader = {'Accept': 'application/json' };
-            var isSecure = request.getURL().indexOf('https:') === 0;
+            var isSecure = Utils.isInCheckout(request);
             var currentDomainMatch = request.getURL().match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
             var currentDomain = currentDomainMatch && currentDomainMatch[0];
 

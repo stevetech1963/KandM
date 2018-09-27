@@ -8,7 +8,7 @@
 <div class="item-views-price">
 	{{#if isPriceEnabled}}
 		{{#if isPriceRange}}
-			<span class="item-views-price-range" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+			<span class="item-views-price-range" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
 				<meta itemprop="priceCurrency" content="{{currencyCode}}"/>
 				<!-- Price Range -->
 				<span class="item-views-price-lead">
@@ -19,10 +19,10 @@
 						{{comparePriceFormatted}}
 					</small>
 				{{/if}}
-				<link itemprop="availability" href="{{#if isInStock}}http://schema.org/InStock{{else}}http://schema.org/OutOfStock{{/if}}"/>
+				<link itemprop="availability" href="{{#if isInStock}}https://schema.org/InStock{{else}}https://schema.org/OutOfStock{{/if}}"/>
 			</span>
 		{{else}}
-			<span class="item-views-price-exact" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<span class="item-views-price-exact" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
 				<meta itemprop="priceCurrency" content="{{currencyCode}}"/>
 				<!-- Single -->
 				<span class="item-views-price-lead" itemprop="price" data-rate="{{price}}">{{priceFormatted}}</span>
@@ -31,7 +31,7 @@
 						{{comparePriceFormatted}}
 					</small>
 				{{/if}}
-				<link itemprop="availability" href="{{#if isInStock}}http://schema.org/InStock{{else}}http://schema.org/OutOfStock{{/if}}"/>
+				<link itemprop="availability" href="{{#if isInStock}}https://schema.org/InStock{{else}}https://schema.org/OutOfStock{{/if}}"/>
 			</span>
 		{{/if}}
 	{{else}}

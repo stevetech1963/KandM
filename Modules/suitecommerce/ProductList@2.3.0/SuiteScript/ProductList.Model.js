@@ -62,11 +62,7 @@ define(
 		// Returns a product list based on a given userId and id
 	,	get: function (user, id)
 		{
-			// Verify session if and only if we are in My Account...
-			if (request.getURL().indexOf('https') === 0)
-			{
-				this.verifySession();
-			}
+			this.verifySession();
 
 			var filters = [new nlobjSearchFilter('internalid', null, 'is', id)
 				,	new nlobjSearchFilter('isinactive', null, 'is', 'F')

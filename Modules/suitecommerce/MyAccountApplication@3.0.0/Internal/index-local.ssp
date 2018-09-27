@@ -49,6 +49,7 @@
 
 		environmentParameters.push('lang=' + Language);
 		environmentParameters.push('cur=' + Currency);
+		environmentParameters.push('X-SC-Touchpoint=myaccount');
 
 		_.each(require('ExternalPayment.Model').getParametersFromRequest(request), function(value, key) {
 			environmentParameters.push(key.concat('=', value));

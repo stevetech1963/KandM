@@ -5,9 +5,9 @@
 	may use this code subject to the terms that govern your access and use.
 }}
 
-<div class="product-reviews-review" itemprop="review" itemscope itemtype="http://schema.org/Review" data-id="{{reviewId}}">
+<div class="product-reviews-review" itemprop="review" itemscope itemtype="https://schema.org/Review" data-id="{{reviewId}}">
 	<div class="product-reviews-review-comment-item-cell">
-		<div data-view="Global.StarRating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"></div>
+		<div data-view="Global.StarRating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating"></div>
 		<span class="product-reviews-review-comment-item-cell-date" itemprop="datePublished">
 			{{ reviewCreatedOn }}
 		</span>

@@ -37,7 +37,7 @@ define(
 		,	confirm_email: {equalTo: 'email', msg: 'Emails must match'}
 		}
 
-	,	isSecure: request.getURL().indexOf('https') === 0
+	,	isSecure: Utils.isInCheckout(request)
 
 	,	isLoggedIn: ModelsInit.session.isLoggedIn2()
 

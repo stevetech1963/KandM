@@ -5,7 +5,7 @@
 	may use this code subject to the terms that govern your access and use.
 }}
 
-<tr id="{{lineId}}" data-item-id="{{itemId}}" data-type="order-item" itemscope itemtype="http://schema.org/Product" {{#if showGeneralClass}} class="{{generalClass}}" {{/if}}>
+<tr id="{{lineId}}" data-item-id="{{itemId}}" data-type="order-item" itemscope itemtype="https://schema.org/Product" {{#if showGeneralClass}} class="{{generalClass}}" {{/if}}>
 	<td class="item-views-cell-actionable-table-first">
 		<div class="item-views-cell-actionable-thumbnail">
 			{{#if isNavigable}}

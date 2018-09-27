@@ -5,7 +5,7 @@
 	may use this code subject to the terms that govern your access and use.
 }}
 
-<div class="facets-item-cell-list" itemprop="itemListElement"  data-item-id="{{itemId}}" itemscope itemtype="http://schema.org/Product" data-track-productlist-list="{{track_productlist_list}}" data-track-productlist-category="{{track_productlist_category}}" data-track-productlist-position="{{track_productlist_position}}" data-sku="{{sku}}">
+<div class="facets-item-cell-list" itemprop="itemListElement"  data-item-id="{{itemId}}" itemscope itemtype="https://schema.org/Product" data-track-productlist-list="{{track_productlist_list}}" data-track-productlist-category="{{track_productlist_category}}" data-track-productlist-position="{{track_productlist_position}}" data-sku="{{sku}}">
 	<div class="facets-item-cell-list-left">
 		<div class="facets-item-cell-list-image-wrapper">
 			{{#if itemIsNavigable}}
@@ -46,7 +46,7 @@
 		</div>
 
 		{{#if showRating}}
-		<div class="facets-item-cell-list-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"  data-view="GlobalViews.StarRating">
+		<div class="facets-item-cell-list-rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"  data-view="GlobalViews.StarRating">
 		</div>
 		{{/if}}
 

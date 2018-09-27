@@ -29,7 +29,7 @@
 		Language = Environment.currentLanguage && Environment.currentLanguage.locale || '';
 		Currency = Environment.currencyCodeSpecifiedOnUrl;
 
-		login = false
+		login = false;
 
 		parameters.fragment = '';
 
@@ -64,6 +64,7 @@
 
 		environmentParameters.push('lang=' + Language );
 		environmentParameters.push('cur=' + Currency );
+		environmentParameters.push('X-SC-Touchpoint=checkout'); 
 
 		if (!login)
 		{

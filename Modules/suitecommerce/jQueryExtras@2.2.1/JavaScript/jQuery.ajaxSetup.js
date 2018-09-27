@@ -121,6 +121,9 @@ define('jQuery.ajaxSetup', ['jQuery','underscore','Utils'], function (jQuery,_)
 				// If there's no charset, we set it to UTF-8
 				jqXhr.setRequestHeader('Content-Type', options.contentType + '; charset=UTF-8');
 			}
+
+			// Add header so that suitescript code can know the current touchpoint
+			jqXhr.setRequestHeader('X-SC-Touchpoint', SC.ENVIRONMENT.SCTouchpoint);
 		}
 	});
 

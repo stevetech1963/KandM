@@ -8,6 +8,7 @@
         ]
     },
     "overrides": {
-        "suitecommerce/Facets@2.3.0/Templates/facets_facet_browse.tpl": "Templates/facets_facet_browse.tpl"
+        "suitecommerce/Facets@2.3.0/Templates/facets_facet_browse.tpl": "Templates/facets_facet_browse.tpl",
+        "suitecommerce/Facets@2.3.0/Sass/_facets-faceted-navigation.scss": "Sass/_facets-faceted-navigation.scss"
     }
 }

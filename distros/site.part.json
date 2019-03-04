@@ -42,7 +42,8 @@
                     "ItemsKeyMapping.Site",
                     "ItemDetails.View.Site",
                     "Header.Logo.View.Site",
-                    "Home.Router.Redirect"
+                    "Home.Router.Redirect",
+                    "Facets.FacetedNavigationItemCategory.View.Extension"
                 ]
             },
             {

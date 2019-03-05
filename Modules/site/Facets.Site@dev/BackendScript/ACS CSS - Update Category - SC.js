@@ -42,15 +42,18 @@ define(['N/search', 'N/record'],
                     var totalLines = categoryRecord.getLineCount({
                         sublistId: 'items'
                     });
+                    var displayInSite = 'T';
 
                     if (totalLines === 0 && categories[i].primaryParent) {
-                        categoryRecord.setValue({
-                            fieldId: 'displayinsite',
-                            value: 'F'
-                        });
-
-                        categoryRecord.save();
+                        displayInSite = 'F';
                     }
+
+                    categoryRecord.setValue({
+                        fieldId: 'displayinsite',
+                        value: displayInSite
+                    });
+
+                    categoryRecord.save();
                 }
             } catch (e) {
                 log.debug({

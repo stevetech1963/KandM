@@ -6,7 +6,7 @@
 }}
 
 <form method="POST">
-	<div class="product-list-edit-item-modal-body" itemscope itemtype="http://schema.org/Product">
+	<div class="product-list-edit-item-modal-body" itemscope itemtype="https://schema.org/Product">
 		<div class="product-list-edit-item-image">
 			<img src="{{thumbnailUrl}}" alt="{{thumbnailAlt}}">
 		</div>
@@ -22,7 +22,7 @@
 				</div>
 
 				{{#if showRating}}
-				<div class="product-list-edit-item-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+				<div class="product-list-edit-item-rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
 					<div data-view="GlobalViews.StarRating"></div>
 				</div>
 				{{/if}}

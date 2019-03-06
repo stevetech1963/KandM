@@ -27,6 +27,7 @@ define(
 
 	,	'jQuery'
 	,	'underscore'
+	,	'Utils'
 	]
 ,	function (
 		AccountRegisterAsGuestModel
@@ -37,6 +38,7 @@ define(
 
 	,	jQuery
 	,	_
+	,	Utils
 	)
 {
 	'use strict';
@@ -136,8 +138,8 @@ define(
 				return promise;
 			};
 
-			// don't wrap on non-secure domains (Site Builder cart is in Checkout :/ )
-			if (window.location.protocol !== 'http:')
+			// Site Builder cart is in Checkout :/ don't wrap if in shopping
+			if (Utils.isInCheckout())
 			{
 				LiveOrderModel.prototype.save = _.wrap(LiveOrderModel.prototype.save, wrapper);
 			}

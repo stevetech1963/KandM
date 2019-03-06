@@ -166,7 +166,7 @@
 					return this;
 				}
 
-				var domainName = Utils.isSecureDomain() ? config.domainNameSecure : config.domainName;
+				var domainName = Utils.isCheckoutDomain() ? config.domainNameSecure : config.domainName;
 
 				if (_.isString(config.propertyID) && _.isString(domainName))
 				{

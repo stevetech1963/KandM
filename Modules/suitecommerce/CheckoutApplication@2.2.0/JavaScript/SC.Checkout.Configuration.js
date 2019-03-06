@@ -69,15 +69,15 @@ define(
 	,*/
 
 
-		currentTouchpoint: _.isSecureDomain() ? 'checkout' : 'viewcart'
+		currentTouchpoint: Utils.isInShopping() ? 'viewcart' : 'checkout'
 
 	,	modulesConfig: {
 			'ItemDetails':  {startRouter: true}
-		,	'Cart':  {startRouter: !_.isSecureDomain()}
-		,	'LoginRegister': {startRouter: _.isSecureDomain()}
+		,	'Cart':  {startRouter: Utils.isInShopping()}
+		,	'LoginRegister': {startRouter: Utils.isCheckoutDomain()}
 		}
 
-	,	startCheckoutWizard: _.isSecureDomain()
+	,	startCheckoutWizard: Utils.isCheckoutDomain()
 /*
 @property {Array} checkoutSteps
 

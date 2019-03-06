@@ -684,9 +684,17 @@ define('Utils'
 		params = params || {};
 		params.n = SC && SC.ENVIRONMENT && SC.ENVIRONMENT.siteSettings && SC.ENVIRONMENT.siteSettings.siteid || '';
 
-		var origin = window.location.origin ? window.location.origin :
-				(window.location.protocol + '//' + window.location.hostname + (window.location.port ? (':' + window.location.port) : ''));
-		return  _.addParamsToUrl(origin + _.getAbsoluteUrl('download.ssp'), params);
+		if(_.isSingleDomain())
+		{
+			return  _.addParamsToUrl(_.getAbsoluteUrl('download.ssp'), params);
+		}
+		else
+		{
+			var origin = window.location.origin ? window.location.origin :
+			(window.location.protocol + '//' + window.location.hostname + (window.location.port ? (':' + window.location.port) : ''));
+			
+			return  _.addParamsToUrl(origin + _.getAbsoluteUrl('download.ssp'), params);
+		}
 	}
 
 	// @method preventAnchorNavigation Fixes anchor elements, preventing default behavior so that they do not change the views (ie: checkout steps) @param {String} selector
@@ -833,9 +841,42 @@ define('Utils'
 		return url_array[0];
 	}
 
-	function isSecureDomain ()
+	// @method isShoppingDomain determines if we are in shopping domain (secure or non secure)
+	// or single domain
+	// @return {Boolean} true if in checkout or in single domain
+	function isShoppingDomain ()
 	{
-		return window.location.href.indexOf('https') === 0;
+		return SC.ENVIRONMENT.siteSettings.shoppingSupported;
+	}
+
+	// @method isCheckoutDomain determines if we are in a secure checkout
+	// domain or in a secure single domain environment
+	// @return {Boolean} true if in checkout or in single domain
+	function isCheckoutDomain ()
+	{
+		return SC.ENVIRONMENT.siteSettings.checkoutSupported;
+	}
+
+	// @method isSingleDomain determines if we are in a single domain environment
+	// @return {Boolean} true if single domain
+	function isSingleDomain ()
+	{
+		return SC.ENVIRONMENT.siteSettings.isSingleDomain;
+	}
+
+	// @method isInShopping determines if we are in shopping ssp
+	// used when there are frontend features only shown in the shopping domain
+	// @return {Boolean} true if in shopping domain, false if in checkout or myaccount
+	function isInShopping () 
+	{
+		return _.isShoppingDomain() && (SC.ENVIRONMENT.SCTouchpoint === 'shopping' || SC.ENVIRONMENT.siteSettings.sitetype === 'STANDARD');
+	}
+
+	// @method isInCheckout determines if we are in checkout or my account ssp
+	// @return {Boolean} true if in checkout domain
+	function isInCheckout ()
+	{
+		return !_.isSingleDomain() ? _.isCheckoutDomain() : _.isCheckoutDomain() && (SC.ENVIRONMENT.SCTouchpoint === 'checkout' ||  SC.ENVIRONMENT.SCTouchpoint === 'myaccount');
 	}
 
 	// @method getSessionParams search within a given url the values of the shopper session @param {String} url @return {Object} the parameters
@@ -1106,7 +1147,11 @@ define('Utils'
 		, 	isDesktopDevice: isDesktopDevice
 		,	isNativeDatePickerSupported: isNativeDatePickerSupported
 		,	selectByViewportWidth: selectByViewportWidth
-		,	isSecureDomain: isSecureDomain
+		,	isShoppingDomain: isShoppingDomain
+		,	isCheckoutDomain: isCheckoutDomain
+		,	isSingleDomain: isSingleDomain
+		,	isInShopping: isInShopping
+		,	isInCheckout: isInCheckout
 		,	resetViewportWidth: resetViewportWidth
 		,	getDeviceType: getDeviceType
 		,	initBxSlider: initBxSlider

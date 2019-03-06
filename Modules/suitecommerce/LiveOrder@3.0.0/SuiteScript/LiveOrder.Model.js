@@ -217,7 +217,7 @@ define(
 		}
 
 		// @property {Boolean} isSecure
-	,	isSecure: request.getURL().indexOf('https') === 0
+	,	isSecure: Utils.isCheckoutDomain()
 
 		// @property {Boolean} isMultiShippingEnabled
 	,	isMultiShippingEnabled: ModelsInit.context.getSetting('FEATURE', 'MULTISHIPTO') === 'T' && SC.Configuration.isMultiShippingEnabled
@@ -639,7 +639,7 @@ define(
 	,	getFieldValues: function ()
 		{
 			var order_field_keys = {}
-			,	isCheckout = this.isSecure && ModelsInit.session.isLoggedIn2()
+			,	isCheckout = Utils.isInCheckout(request) && ModelsInit.session.isLoggedIn2()
 			,	field_keys = isCheckout ? SC.Configuration.orderCheckoutFieldKeys : SC.Configuration.orderShoppingFieldKeys;
 
 			order_field_keys.items = field_keys.items;
@@ -1241,14 +1241,17 @@ define(
 		// @method setPurchaseNumber @param {LiveOrder.Model.Data} data
 	,	setPurchaseNumber: function (data)
 		{
-			if (data && data.purchasenumber)
+			if(ModelsInit.session.isLoggedIn2())
 			{
-				ModelsInit.order.setPurchaseNumber(data.purchasenumber);
-			}
-			else
-			{
-				ModelsInit.order.removePurchaseNumber();
-			}
+				if (data && data.purchasenumber)
+				{
+					ModelsInit.order.setPurchaseNumber(data.purchasenumber);
+				}
+				else
+				{
+					ModelsInit.order.removePurchaseNumber();
+				}
+			}		
 		}
 
 		// @method setPaymentMethods
@@ -1433,7 +1436,7 @@ define(
 		{
 			var require_terms_and_conditions = ModelsInit.session.getSiteSettings(['checkout']).checkout.requiretermsandconditions;
 
-			if (require_terms_and_conditions.toString() === 'T' && this.isSecure && !_.isUndefined(data.agreetermcondition))
+			if (require_terms_and_conditions.toString() === 'T' && this.isSecure && !_.isUndefined(data.agreetermcondition) && ModelsInit.session.isLoggedIn2())
 			{
 				ModelsInit.order.setTermsAndConditions(data.agreetermcondition);
 			}
@@ -1444,7 +1447,7 @@ define(
 	,	setTransactionBodyField: function (data)
 		{
 			// Transaction Body Field
-			if (this.isSecure && !_.isEmpty(data.options))
+			if (this.isSecure && !_.isEmpty(data.options) && ModelsInit.session.isLoggedIn2())
 			{
 				ModelsInit.order.setCustomFieldValues(data.options);
 			}

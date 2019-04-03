@@ -1,0 +1,10 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ItemViews@1.3.0/Templates/item_views_price.tpl": "Templates/item_views_price.tpl"
+    }
+}

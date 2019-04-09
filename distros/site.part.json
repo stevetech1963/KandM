@@ -24,6 +24,7 @@
         "site/ItemDetails.Site": "dev",
         "site/Cart.Site": "dev",
         "site/OrderWizard.Module.Confirmation.Site": "dev"
+    ,   "site/ItemViews.Site": "dev"
     },
     "tasksConfig": {
         "javascript": [
